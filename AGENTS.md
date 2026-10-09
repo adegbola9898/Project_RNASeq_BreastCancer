@@ -39,7 +39,7 @@ correct and validate its methodology before making publication claims.
 - Analytical datasets: GSE243375, GSE52194, GSE58135.
 - GSE263089 has no samples in the final metadata.
 - The earlier 31,001-row attachment was truncated, not a filtered version.
-- R and Rscript 4.5.2 are installed; renv is not yet initialized.
+- R and Rscript 4.5.2 are installed; minimal project-local renv 1.3.1 is initialized and verified, recording the new reproduction environment rather than historical package versions.
 
 ## Scientific safeguards
 - Historical saved outputs are not newly reproduced results.
