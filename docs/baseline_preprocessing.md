@@ -1,6 +1,6 @@
 # Original baseline preprocessing through batch correction
 
-This document records source extraction and the baseline implementation described below, not a reproduced result. The implementation has not been run. Scope ends at batch-corrected expression and its transpose; soft-thresholding, WGCNA quality control and network construction are excluded. References use **one-based cell positions in the notebook JSON `cells` array**, counting all cell types; subtract one for the zero-based index. These source cells have null execution counts, so execution numbers cannot identify them or establish execution order.
+This document records source extraction, the baseline implementation and the completed reproduction run described below. Successful execution and checkpoint agreement do not establish scientific validation. Scope ends at batch-corrected expression and its transpose; soft-thresholding, WGCNA quality control and network construction are excluded. References use **one-based cell positions in the notebook JSON `cells` array**, counting all cell types; subtract one for the zero-based index. These source cells have null execution counts, so execution numbers cannot identify them or establish execution order.
 
 ## Sources and inputs
 
@@ -249,7 +249,7 @@ Unlike cell 1, cell 21 contains no explicit `as.factor` or `relevel` metadata pr
 
 ## Historical checkpoints (saved notebook outputs only)
 
-None of the following were newly reproduced. Matching displayed values do not prove identical full matrices or establish which notebook produced a historical file.
+The following entries are historical saved notebook outputs, not execution evidence from the new run. Observed agreement in the completed run is documented separately below. Matching displayed values do not prove identical full matrices or establish which notebook produced a historical file.
 
 | Source | Saved checkpoint |
 | --- | --- |
@@ -289,9 +289,9 @@ Historical package versions remain unknown. R and Bioconductor release informati
 
 Dataset and analytical label are strongly confounded in the saved table. Neither DESeq2 design nor batch removal includes patient IDs; batch correction does not establish independent samples or independent validation. These issues are recorded without altering the baseline or introducing methodological corrections. Upstream annotation/merge gaps need separate scope if reconstruction from raw inputs is requested; they do not justify inventing processing steps when starting from the established processed CSVs.
 
-## Implemented script (not yet executed)
+## Implemented script and output recording
 
-`scripts/baseline/preprocess.R` implements selected cell 2. When execution is separately authorized, run `Rscript scripts/baseline/preprocess.R` from the repository root with renv activated. Do not source the script for syntax checking: its final `main()` call starts preprocessing. It requires the already installed project-local packages, R 4.5.2, renv 1.3.1 and Bioconductor 3.21; it never installs packages.
+`scripts/baseline/preprocess.R` implements selected cell 2. The completed run used `Rscript scripts/baseline/preprocess.R` from the repository root with renv activated; any additional execution requires separate authorization. Do not source the script for syntax checking: its final `main()` call starts preprocessing. It requires the already installed project-local packages, R 4.5.2, renv 1.3.1 and Bioconductor 3.21; it never installs packages.
 
 Added validation rejects empty/duplicate sample or gene IDs, unequal sample sets, silent CSV header repair, nonnumeric/missing/nonfinite/negative/fractional/out-of-integer-range counts, zero sample library sizes, missing metadata fields, ambiguous category/Subtype values and unexpected labels. Gene IDs and metadata sample IDs are checked for whitespace padding, but `read.csv` strips whitespace from count-column headers before validation, so padded count headers are not reliably rejected. Input batches must contain exactly `study1`, `study2`, `study3`; input subtype labels must contain exactly `Normal`, `ER+`, `TNBC`, `HER2+`. The original conditional rename, alias recoding, factor levels, metadata reordering and filtering remain intact. Checks after recoding and at matrix boundaries ensure no identifiers or orientation were changed unexpectedly. Validation itself does not trim, round, impute, relabel or discard unexpected inputs.
 
@@ -309,6 +309,32 @@ Each execution creates a fresh `Results/baseline_preprocessing/run-<UTC timestam
 | `execution_provenance.rds`, `execution_provenance.txt` | Input paths/SHA-256, notebook/script/lockfile SHA-256, analytical settings, execution dimensions, retained-gene count, batch/subtype table, timestamps, completion status and captured warnings. The RDS retains the full captured warning text; the text summary may truncate it. |
 | `sessionInfo.txt`, `package_versions.csv`, `execution.log` | Session information, installed project-library package versions/paths, and runtime diagnostics/messages. The log does not reliably contain warnings emitted after it is closed. |
 
-SHA-256 recording requires the existing `sha256sum` command; absence is a clear failure, not a fallback to another hash. Provenance records are written on exit once the validated run directory exists, including on an incomplete analysis; only `status = "completed"` establishes successful completion. Earlier validation failures create no run directory. Historical dimensions and retained-gene checkpoints are explicitly stored under `historical_checkpoints_not_reproduced`, with comparisons recorded separately; discrepancies are not silently corrected or forced to match history. No future execution results are asserted in this document.
+SHA-256 recording requires the existing `sha256sum` command; absence is a clear failure, not a fallback to another hash. Provenance records are written on exit once the validated run directory exists, including on an incomplete analysis; only `status = "completed"` establishes successful completion. Earlier validation failures create no run directory. Historical dimensions and retained-gene checkpoints are explicitly stored under `historical_checkpoints_not_reproduced`, with comparisons recorded separately; discrepancies are not silently corrected or forced to match history. The historical fields remain labelled as saved checkpoints; observed results from the completed run are recorded separately below.
 
 The environment verification reviewed this import warning: `replacing previous import ‘S4Arrays::makeNindexFromArrayViewport’ by ‘DelayedArray::makeNindexFromArrayViewport’ when loading ‘SummarizedExperiment’`. Package loading succeeded; this does not establish that preprocessing succeeds. The script records warnings without suppressing them or changing package behavior. Historical package versions remain unknown despite the logged R/Bioconductor releases; the lockfile identifies newly locked reproduction versions only.
+
+## Completed baseline run and independent review
+
+Implementation commit: **`eab95f9`** (`eab95f95de771870f768e0fcabc0b32d829328c5`). The single authorized execution on **2026-10-13** used `Rscript scripts/baseline/preprocess.R` and wrote to **`Results/baseline_preprocessing/run-20261013T053229Z-205981/`**. Command exit status was **0**, with reported process wall time **176.79 seconds** from the execution report. The saved provenance records `status = "completed"`, start at 05:32:29 UTC and finish at 05:35:15 UTC; these internal timestamps do not include the entire process startup time. No analysis was rerun for this documentation update.
+
+| Observed object | Dimensions and orientation |
+| --- | --- |
+| Raw count input | 39,376 genes × 279 samples |
+| Filtered counts | 25,750 genes × 279 samples |
+| Pre-batch VST expression | 25,750 genes × 279 samples |
+| Post-batch expression | 25,750 genes × 279 samples |
+| Final expression | 279 samples × 25,750 genes |
+
+The execution log reports **25,750 retained genes** and **1,107 outlier replacements/refits**, matching the historical checkpoints. The observed batch/category table (category recoded to `Subtype`) matches the historical table above. The pre-batch VST summary matches at printed precision: Min 1.671, Q1 5.313, Median 7.614, Mean 7.137, Q3 9.012, Max 23.421. Both PCA calls report `ntop=500`. These are observed checkpoint agreements in a new reproduction environment, not recovered historical software versions.
+
+**Claude's independent review**, as reported by the project, confirmed the original filter, recodes, batch-term subtraction and exact final transpose. Claude also confirmed that **all 120 historical preview values agree at displayed precision**. **No full historical expression matrix was compared.** These independent review findings are attributed to Claude; the documentation update did not repeat that review or execute preprocessing.
+
+Saved matrices and provenance were inspected read-only. Dimensions, identifier uniqueness/order, metadata alignment, factor levels and finite expression values were confirmed; the final matrix equals the transpose of post-batch expression exactly. Session information and package-version records identify R 4.5.2, renv 1.3.1 and the pinned Bioconductor 3.21 reproduction environment, with DESeq2 1.48.2, limma 3.64.3, dplyr 1.2.1 and ggplot2 4.0.3.
+
+The provenance RDS contains **exactly one warning**, the previously reviewed SummarizedExperiment import warning quoted above; **no new warnings were reported**. `execution_provenance.rds` retains its full captured text. The text summary truncates this warning, and `execution.log` does not contain its delayed emission. This capture limitation does not indicate an additional warning.
+
+Both PCA images rendered successfully at 2400 × 1800 pixels. Visual clustering does **not** establish removal of batch–subtype confounding or preservation of biological signal. The saved corrected expression contains **5,673 negative values**, with minimum **-3.58007817492** (approximately -3.58); the final transpose contains the same values. Preserve these baseline values as produced: do not clip, round or otherwise alter the outputs.
+
+Input checksums match the documented values and saved provenance. Inputs, original notebooks and renv files remained unchanged; generated outputs are ignored by Git. Read-only evidence includes `execution.log`, `execution_provenance.rds`, `sessionInfo.txt`, `package_versions.csv`, the saved matrix/metadata files and the PCA images. Exit status and process wall time are taken from the execution report, rather than inferred from the RDS.
+
+Remaining limitations include **fragile cross-dataset overlap**, strong batch–subtype confounding, repeated patients (missing patient IDs do not establish independence), unresolved gene-annotation provenance, unknown historical package versions, and **untested second-run and other-machine reproducibility**. Matching checkpoints and independent implementation review establish baseline execution agreement within these limits; they do not validate the scientific methodology or support publication claims.
