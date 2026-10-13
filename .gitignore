@@ -1,3 +1,6 @@
 
 # Windows download metadata
 *:Zone.Identifier
+
+# Generated baseline preprocessing runs
+/Results/baseline_preprocessing/

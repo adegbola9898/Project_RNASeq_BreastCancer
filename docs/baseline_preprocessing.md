@@ -1,6 +1,6 @@
 # Original baseline preprocessing through batch correction
 
-This is source extraction, not preprocessing implementation or a reproduced result. No R analysis was run. Scope ends at batch-corrected expression and its transpose; soft-thresholding, WGCNA quality control and network construction are excluded. References use **one-based cell positions in the notebook JSON `cells` array**, counting all cell types; subtract one for the zero-based index. These source cells have null execution counts, so execution numbers cannot identify them or establish execution order.
+This document records source extraction and the baseline implementation described below, not a reproduced result. The implementation has not been run. Scope ends at batch-corrected expression and its transpose; soft-thresholding, WGCNA quality control and network construction are excluded. References use **one-based cell positions in the notebook JSON `cells` array**, counting all cell types; subtract one for the zero-based index. These source cells have null execution counts, so execution numbers cannot identify them or establish execution order.
 
 ## Sources and inputs
 
@@ -278,13 +278,37 @@ The source does not save a dedicated batch-corrected expression artifact in thes
 
 The project has selected **`Original_Manu_Pipe.ipynb` cell 2 (one-based)** as the baseline preprocessing source. The rationale is that the current inputs are compatible, the saved checkpoints match this cell, and downstream cells use its outputs. The February notebook variants remain documented for comparison, not as pending source choices. Do not create a hybrid by borrowing alignment, factor preparation or plotting from them.
 
-Implementation adaptations are limited to file locations:
+The analytical source is preserved; file-location adaptations are:
 
 - Replace `/content/metadata.csv` with `Data/Processed/metadata.csv` and `/content/updated_count_matrix (1).csv` with `Data/Processed/updated_count_matrix (1).csv`.
 - Redirect `PCA_pre_batch.png` and `PCA_post_batch.png` to a separate baseline output directory, such as `Results/baseline_preprocessing/`, without overwriting historical outputs.
 
-Preserve the selected cell's analytical calls, parameter values and omitted defaults, including the PCA export settings. The verbatim source block above retains the original paths; these adaptations are documented here for future implementation, not applied in this task.
+The implementation preserves the selected cell's analytical calls, parameter values and omitted defaults, including the PCA export settings. The verbatim source block above retains the original paths; the script applies these file-location adaptations and adds the validation and recording described below.
 
 Historical package versions remain unknown. R and Bioconductor release information alone does not recover the installed package versions or their effective defaults. A run in the new renv environment must be described as a new reproduction environment, not exact historical software reconstruction.
 
 Dataset and analytical label are strongly confounded in the saved table. Neither DESeq2 design nor batch removal includes patient IDs; batch correction does not establish independent samples or independent validation. These issues are recorded without altering the baseline or introducing methodological corrections. Upstream annotation/merge gaps need separate scope if reconstruction from raw inputs is requested; they do not justify inventing processing steps when starting from the established processed CSVs.
+
+## Implemented script (not yet executed)
+
+`scripts/baseline/preprocess.R` implements selected cell 2. When execution is separately authorized, run `Rscript scripts/baseline/preprocess.R` from the repository root with renv activated. Do not source the script for syntax checking: its final `main()` call starts preprocessing. It requires the already installed project-local packages, R 4.5.2, renv 1.3.1 and Bioconductor 3.21; it never installs packages.
+
+Added validation rejects empty/duplicate sample or gene IDs, unequal sample sets, silent CSV header repair, nonnumeric/missing/nonfinite/negative/fractional/out-of-integer-range counts, zero sample library sizes, missing metadata fields, ambiguous category/Subtype values and unexpected labels. Gene IDs and metadata sample IDs are checked for whitespace padding, but `read.csv` strips whitespace from count-column headers before validation, so padded count headers are not reliably rejected. Input batches must contain exactly `study1`, `study2`, `study3`; input subtype labels must contain exactly `Normal`, `ER+`, `TNBC`, `HER2+`. The original conditional rename, alias recoding, factor levels, metadata reordering and filtering remain intact. Checks after recoding and at matrix boundaries ensure no identifiers or orientation were changed unexpectedly. Validation itself does not trim, round, impute, relabel or discard unexpected inputs.
+
+Each execution creates a fresh `Results/baseline_preprocessing/run-<UTC timestamp>-<PID>/` directory and refuses to reuse an existing one. The entire output tree is ignored by Git. All generated files, including the original histogram adapted to an explicit PNG device, stay inside that directory:
+
+| Output | Content/orientation |
+| --- | --- |
+| `filtered_counts.rds` | Original filtered count data frame, genes × samples; no DESeq2 outlier replacements substituted. |
+| `aligned_metadata.rds`, `aligned_metadata.csv` | Aligned and recoded metadata; RDS preserves factor levels. |
+| `expression_pre_batch.rds` | VST expression before batch removal, genes × samples. |
+| `expression_post_batch.rds` | Batch-corrected VST expression, genes × samples. |
+| `expression_samples_by_genes.rds` | Final `expr`, samples × genes. |
+| `PCA_pre_batch.png`, `PCA_post_batch.png` | Original PCA calls, plots and export settings; destinations redirected. |
+| `count_threshold_histogram.png` | Original count-threshold histogram; explicit device prevents a repository-root `Rplots.pdf`. |
+| `execution_provenance.rds`, `execution_provenance.txt` | Input paths/SHA-256, notebook/script/lockfile SHA-256, analytical settings, execution dimensions, retained-gene count, batch/subtype table, timestamps, completion status and captured warnings. The RDS retains the full captured warning text; the text summary may truncate it. |
+| `sessionInfo.txt`, `package_versions.csv`, `execution.log` | Session information, installed project-library package versions/paths, and runtime diagnostics/messages. The log does not reliably contain warnings emitted after it is closed. |
+
+SHA-256 recording requires the existing `sha256sum` command; absence is a clear failure, not a fallback to another hash. Provenance records are written on exit once the validated run directory exists, including on an incomplete analysis; only `status = "completed"` establishes successful completion. Earlier validation failures create no run directory. Historical dimensions and retained-gene checkpoints are explicitly stored under `historical_checkpoints_not_reproduced`, with comparisons recorded separately; discrepancies are not silently corrected or forced to match history. No future execution results are asserted in this document.
+
+The environment verification reviewed this import warning: `replacing previous import ‘S4Arrays::makeNindexFromArrayViewport’ by ‘DelayedArray::makeNindexFromArrayViewport’ when loading ‘SummarizedExperiment’`. Package loading succeeded; this does not establish that preprocessing succeeds. The script records warnings without suppressing them or changing package behavior. Historical package versions remain unknown despite the logged R/Bioconductor releases; the lockfile identifies newly locked reproduction versions only.
