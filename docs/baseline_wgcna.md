@@ -238,6 +238,97 @@ Inventory SHA-256 values (current file identity, not recovered source-run proven
 | `module_trait_summary.csv` | `a7e8c56dde5e05fc117cc1ed4a3977cada67ba5558896dbfc2d0694bb8b932f3` |
 | `soft_thresholding_results.csv` | `14d1448e59764fedb1fcfa998059fc16c176624b9e86c4ecc6f0c6f8d7f13e51` |
 
+## Installed and locked reproduction dependencies (2026-10-14)
+
+Dependency installation was authorized separately from WGCNA execution. Preflight confirmed branch `analysis/initial-review`, HEAD `8fbb9fa` (`8fbb9fa65c8204df0505c1a4edfbb8325b25c7b4`) and a clean working tree. Activated environment: R **4.5.2**, renv **1.3.1**, Bioconductor **3.21**. No WGCNA analysis or network construction was implemented or run. The following are **new reproduction versions**, not recovered historical versions.
+
+The complete approved list was reconstructed from Claude's table with explicit overrides for survival, cluster, nnet, rpart and foreign. All 45 exact source versions were downloaded for read-only DESCRIPTION verification, including archived CRAN versions where needed. Combined with the existing 68 locked versions, the required Depends/Imports/LinkingTo closure was exactly **113 non-base packages**; **213 versioned constraints** passed, with no conflicts or missing requirements. Suggests and broad updates were excluded. Bioconductor additions were resolved through the pinned 3.21 repository and their exact versions verified before installation and in the snapshot. GO.db and AnnotationDbi were not added.
+
+All **45 additions installed successfully into the project-local renv library**, using its normal user cache. renv reported 310 seconds for installation; 25 additions required compilation. No system packages or existing locked packages were changed. The complete approved/installed additions are:
+
+| Package | Version | Source |
+| --- | --- | --- |
+| `backports` | 1.5.1 | CRAN |
+| `base64enc` | 0.1-6 | CRAN |
+| `bslib` | 0.12.0 | CRAN |
+| `cachem` | 1.1.0 | CRAN |
+| `checkmate` | 2.3.4 | CRAN |
+| `cluster` | 2.1.8.2 | CRAN |
+| `colorspace` | 2.1-4 | CRAN |
+| `data.table` | 1.18.6.1 | CRAN |
+| `digest` | 0.6.39 | CRAN |
+| `doParallel` | 1.0.17 | CRAN |
+| `dynamicTreeCut` | 1.63-1 | CRAN |
+| `evaluate` | 1.0.5 | CRAN |
+| `fastcluster` | 1.3.0 | CRAN |
+| `fastmap` | 1.2.0 | CRAN |
+| `fontawesome` | 0.5.3 | CRAN |
+| `foreach` | 1.5.2 | CRAN |
+| `foreign` | 0.8-91 | CRAN |
+| `Formula` | 1.2-6 | CRAN |
+| `fs` | 2.1.0 | CRAN |
+| `gridExtra` | 2.3.1 | CRAN |
+| `highr` | 0.12 | CRAN |
+| `Hmisc` | 5.3-0 | CRAN |
+| `htmlTable` | 2.5.0 | CRAN |
+| `htmltools` | 0.5.9 | CRAN |
+| `htmlwidgets` | 1.6.4 | CRAN |
+| `impute` | 1.82.0 | Bioconductor 3.21 |
+| `iterators` | 1.0.14 | CRAN |
+| `jquerylib` | 0.1.4 | CRAN |
+| `knitr` | 1.52 | CRAN |
+| `memoise` | 2.0.1 | CRAN |
+| `nnet` | 7.3-20 | CRAN |
+| `pheatmap` | 1.0.13 | CRAN |
+| `preprocessCore` | 1.70.0 | Bioconductor 3.21 |
+| `rappdirs` | 0.3.4 | CRAN |
+| `rmarkdown` | 2.32 | CRAN |
+| `rpart` | 4.1.24 | CRAN |
+| `rstudioapi` | 0.19.0 | CRAN |
+| `sass` | 0.4.10 | CRAN |
+| `stringi` | 1.8.9 | CRAN |
+| `stringr` | 1.6.0 | CRAN |
+| `survival` | 3.8-6 | CRAN |
+| `tinytex` | 0.61 | CRAN |
+| `WGCNA` | 1.74 | CRAN |
+| `xfun` | 0.61 | CRAN |
+| `yaml` | 2.3.12 | CRAN |
+
+### Loading, warnings and installed defaults
+
+Five separate fresh activated Rscript processes successfully loaded WGCNA, gridExtra, pheatmap, impute and preprocessCore, with **zero captured warnings** in each. A further fresh process loaded DESeq2 → limma → WGCNA, followed by gridExtra/pheatmap, and captured **one warning**: the previously reviewed SummarizedExperiment import replacement involving S4Arrays/DelayedArray. Full captured text is retained in the diagnostics RDS; no new load warnings were captured. Function inspection and session setup did not construct a network.
+
+After `cor <- WGCNA::cor`, function identity and namespace environment `WGCNA` were verified. Full installed `formals()` for blockwiseModules, pickSoftThreshold, adjacency, signedKME, intramodularConnectivity, orderMEs, cor and enableWGCNAThreads were saved in `installed-function-defaults.rds` and `.txt`. Representative **WGCNA 1.74 reproduction defaults**, not historical defaults:
+
+| Function/argument | Installed default |
+| --- | --- |
+| blockwiseModules: networkType / TOMType | `"unsigned"` / `"signed"` |
+| blockwiseModules: deepSplit / detectCutHeight | 2 / 0.995 |
+| blockwiseModules: pamStage / pamRespectsDendro | TRUE / TRUE |
+| blockwiseModules: TOMDenom / corType | `"min"` / `"pearson"` |
+| blockwiseModules: minKMEtoStay / minCoreKME | 0.3 / 0.5 |
+| blockwiseModules: impute / nThreads | TRUE / 0 |
+| cor: use | `"all.obs"` |
+| cor: method formal | `c("pearson", "kendall", "spearman")` |
+
+The selected baseline still preserves source omissions and cell 15 as written. Recording installed defaults does not correct the analytical source or recover its actual historical session. Symbolic/default expressions are preserved in the full formals records; network-specific runtime behavior has not been exercised.
+
+### Thread and numerical-library configuration
+
+`enableWGCNAThreads()` without an explicit argument reported **7 working processes**; `WGCNAnThreads()` returned **7**. `parallel::detectCores()` reported **8**, including 8 for `logical = FALSE`. In that fresh session `ALLOW_WGCNA_THREADS` was `"7"`; OMP_NUM_THREADS, OMP_THREAD_LIMIT, OPENBLAS_NUM_THREADS, GOTO_NUM_THREADS, MKL_NUM_THREADS, BLIS_NUM_THREADS, VECLIB_MAXIMUM_THREADS and RCPP_PARALLEL_NUM_THREADS were unset. These are observed session settings, not a measured BLAS thread count or proof of network parallel performance.
+
+BLAS: `/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1`; LAPACK: `/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1`. Contrast options were `contr.treatment` / `contr.poly`. Full configuration and session information are retained in the local diagnostics.
+
+### Targeted snapshot safeguards and evidence
+
+An explicit snapshot used exactly these roots: renv, BiocManager, BiocVersion, DESeq2, limma, dplyr, ggplot2, scales, WGCNA, gridExtra and pheatmap. It was first written to a temporary lockfile. Acceptance checks required exactly **113 packages**, identical complete records for **all original 68 packages**, exactly the **45 approved additions** at their verified versions/sources, and unchanged R/repository/Bioconductor configuration and `renv/settings.json`. All checks passed before the verified preview was copied to `renv.lock`.
+
+Final checks confirmed exact equality of the project-library package set and lockfile package set, matching versions for all 113 packages, unchanged original records, and the exact required closure. `renv::status()` reported the 45 additions as installed/recorded but **unused under implicit source discovery**, because no WGCNA implementation script exists yet; this is distinguished from a missing package or version mismatch. The implicit snapshot setting was not changed, and excluded notebook branches were not used as snapshot roots.
+
+Diagnostics are preserved under the Git-ignored directory **`renv/local/wgcna-dependency-install-20261014/`**, separate from analysis outputs: approved-plan.csv (complete versions/source URLs), source DESCRIPTION records in approved-plan.rds, metadata logs, installation.log, five individual load logs and warning RDS files, load-session.log and warnings-session.rds, installed-function-defaults records, thread-configuration records, sessionInfo.txt, snapshot-preview.log, the accepted preview and original lockfiles, and final-consistency.log. Temporary verification initially encountered sandbox DNS/cache restrictions and a malformed Bioconductor URL in the verifier; those pre-install failures were corrected before installation began. Neither was an unavailable approved version or an installation failure; their logs are retained. The actual installation succeeded without repair or retry.
+
+Successful compilation/loading and dependency consistency do not establish WGCNA runtime success, scientific validation or historical reproducibility. **WGCNA execution remains pending a resource assessment**: this installation did not test the memory requirements of a single 25,750-gene block or full adjacency, BLAS/network performance, cross-machine behavior, or the provisional kME identity problem. Original inputs, notebooks, existing baseline outputs and renv settings remain unchanged.
+
 ## Verbatim source appendix
 
 The blocks below are documentary extracts and must not be executed as a concatenated script. Repeated functions/object names denote variants, not a combined workflow. Full cells include historical installation lines where present; none was run here.
