@@ -4,3 +4,6 @@
 
 # Generated baseline preprocessing runs
 /Results/baseline_preprocessing/
+
+# Generated baseline WGCNA runs
+/Results/baseline_wgcna/
