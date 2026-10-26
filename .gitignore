@@ -13,3 +13,6 @@
 
 # Separate four-model manuscript replay
 /Results/baseline_manuscript_ml/
+
+# Portable frozen baseline release payloads (large evidence stays out of Git)
+/Results/baseline_release/

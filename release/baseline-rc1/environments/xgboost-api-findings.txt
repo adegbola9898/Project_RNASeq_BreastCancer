@@ -1,0 +1,62 @@
+XGBoost source/API review for Machine_Learn.ipynb cell 74 (verbatim, no adaptation)
+Reviewed 2026-10-26 by Claude Code (claude-opus-5-5) for Samuel; static source inspection only, no fitting.
+
+Cell 74 contract:
+  xgb_mod <- xgboost(data = X_train_mat, label = y_train_int, objective = "multi:softprob",
+    num_class = length(levels(y_train)), nrounds = 100, max_depth = 6, eta = 0.1, verbose = 0)
+  xgb_prob <- matrix(predict(xgb_mod, X_test_mat), ncol = length(levels(y_train)), byrow = TRUE)
+Requires: xgboost(data=, label=, nrounds=, verbose=) with booster parameters via `...`, and a default
+predict() that returns a FLAT vector, row-major (the num_class values of one row are contiguous).
+
+Candidates (CRAN source tarballs; SHA-256 also in candidates.sha256):
+  3.2.1.1  https://cloud.r-project.org/src/contrib/xgboost_3.2.1.1.tar.gz
+           54f3f59aa5689117977aab725b6bda88db71fff4b1b6d92289f81cb10bcee2a5
+  1.6.0.1  https://cloud.r-project.org/src/contrib/Archive/xgboost/xgboost_1.6.0.1.tar.gz
+           9ae99a20997e1b02ffd21cabada2a55e53f5754746238ee900de5eb6cd964ebd
+  1.7.11.1 https://cloud.r-project.org/src/contrib/Archive/xgboost/xgboost_1.7.11.1.tar.gz
+           c15b631be77ae17fef46166abffb3336738a812c219d82c601bc70664a88d7c5
+
+3.2.1.1: INCOMPATIBLE (would require silent adaptation).
+  - R/xgboost.R:1111 xgboost(x, y, objective, nrounds, max_depth, learning_rate, ..., verbosity, ...).
+  - R/utils.R deprecated_xgboost_params: data->x, label->y, eta->learning_rate are deprecated renames;
+    params/save_period/save_name/xgb_model/callbacks/missing/maximize removed. Under
+    options(xgboost.strict_mode=TRUE) deprecated names error.
+  - R/xgb.Booster.R:356 predict(): strict_shape=FALSE returns a [nrows, ngroups] MATRIX for multi-class.
+    matrix(<matrix>, ncol=K, byrow=TRUE) would re-read column-major values row-wise and scramble
+    probabilities across samples/classes.
+
+1.6.0.1: COMPATIBLE verbatim API, but NOT BUILDABLE with the unmodified local toolchain (not selected).
+  Build log: install-1.6.0.1-failed.log. Ubuntu's R 4.5.2 compiles C++ with -Werror=format-security;
+  src/xgboost_R.cc:44 calls error(XGBGetLastError()) with a non-literal format, which GCC 15.2 rejects.
+  Building it would need a native compiler-flag override, a toolchain deviation left for separate review.
+  The API notes below apply to both 1.x releases.
+  - R/xgboost.R:6 xgboost(data = NULL, label = NULL, missing = NA, weight = NULL, params = list(), nrounds,
+    verbose = 1, ..., callbacks = list(), ...); check.booster.params(params, ...) merges objective,
+    num_class, max_depth, eta from `...`; num_class >= 2 required for multi:* (4 supplied).
+  - xgb.get.DMatrix(): numeric matrix + label -> xgb.DMatrix (data.frame would be rejected; cell 74 passes
+    as.matrix()).
+  - R/xgb.Booster.R:327 predict.xgb.Booster(..., reshape = FALSE, strict_shape = FALSE): libxgboost returns
+    shape = (n_row, n_groups) and flat results; arr <- array(ret, dim = rev(shape)) (i.e. row-major);
+    for normal prediction with reshape=FALSE it returns as.vector(ret), the flat row-major vector. The
+    package's own reshape branch uses matrix(arr, ncol = n_groups, byrow = TRUE), the same inverse that
+    cell 74 applies. Contract: flat_row_major_multiclass_probability_vector.
+  - DESCRIPTION: Depends R (>= 3.3.0); Imports Matrix (>= 1.1-0), methods, data.table (>= 1.9.6),
+    jsonlite (>= 1.0); SystemRequirements GNU make, C++14; NeedsCompilation yes. All requirements are met
+    by the retained 149 records (Matrix 1.7-4, data.table 1.18.6.1, jsonlite 2.0.0) and base R 4.5.2;
+    xgboost is the only addition (xgboost-1.6.0.1-closure.csv).
+  - No `if (class(x) == ...)` patterns found in R/ that newer R would reject.
+
+1.7.11.1: COMPATIBLE verbatim (SELECTED).
+  - R/xgboost.R is byte-identical to 1.6.0.1 (same xgboost() signature and `...` parameter merge).
+  - predict.xgb.Booster has the same reshape = FALSE / strict_shape = FALSE defaults and the same flat
+    row-major as.vector(ret) normal-prediction path; the only difference from 1.6.0.1 is the thread count
+    used when converting a matrix to xgb.DMatrix, which does not change values.
+  - src/xgboost_R.cc uses Rf_error("%s", XGBGetLastError()), so it builds with the unmodified toolchain.
+  - Same DESCRIPTION requirements as 1.6.0.1 (SystemRequirements GNU make, C++17); closure
+    xgboost-1.7.11.1-closure.csv: xgboost is the only addition, no retained record changes.
+
+Selection rationale: 1.6.0.1 (closest to the manuscript's coarse "xgboost1.6") cannot be built without a
+toolchain override; 1.7.11.1 is the last 1.x release, keeps the verbatim cell-74 API and prediction
+contract, builds as-is, and needs no change to any retained record. This is a reproduction version, not a
+recovered historical build; historical session/build details remain unknown, and numerical agreement with
+the historical 1.6-era fit is not assumed.

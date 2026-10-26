@@ -1,9 +1,12 @@
 # Baseline manuscript-to-source reconciliation
 
-26 October 2026, Africa/Lagos. Documentation-only reconciliation at repository
-HEAD `db8fb67` on `analysis/initial-review`. No installation, training, network
-reconstruction, manuscript editing or original-input modification was performed.
-This ledger separates numerical reproduction from scientific validation.
+26 October 2026, Africa/Lagos. Documentation-only reconciliation first written at
+repository HEAD `db8fb67` on `analysis/initial-review`, then updated after the
+single four-model manuscript replay at commit
+`40926994f7e45aa2eb8dce8657a490f51d1316c3` (see
+[Executed replay results](#executed-replay-results)). No network reconstruction,
+manuscript editing or original-input modification was performed. This ledger
+separates numerical reproduction from scientific validation.
 
 ## Sources, identity and interpretation
 
@@ -81,11 +84,11 @@ runner completion. No COMPLETED is created or inferred.
 | C09 — Results p4 | kWithin median 230.7, mean 421.6, range .36–2145.2; kME–kWithin r=.445 | Manu 13,15–16; W degree_stats, kME_table, log/masterNodes (latter retained in full archive) | **Reproduced** log checkpoints: 230.6555, 421.5569, .3622–2145.2327 and .445. Provisional positional kME remapping remains scientifically unresolved; A cannot validate original live IMC or kME identity. Those numbers do not establish a corrected membership analysis or a demonstrated scale-free distribution. |
 | C10 — Methods p3; Results p4 | Top 50 per subtype / top 20 per subtype yields 350; strongest-correlation module assignment | Manu 47 explicit final_assignments; W final_hub_genes*.csv | **Discrepant selection description**, although **reproduced panel size**: seven manual module–subtype pairs ×50; ERpos 100, TNBC 100, HER2pos 150. Modules are greenyellow/midnightblue (TNBC), yellow/magenta/blue (HER2pos), black/brown (ERpos). Source does not compute strongest-correlation assignments. The saved order/IDs are pinned in the ML spec; project-reported top-50 check is attributed there, not repeated here. |
 | C11 — ML Methods p3 | 80% training / 20% test | ML 70 and 120; repeated R count outputs 7,14,21 | **Discrepant:** R source p=.7 and saved 198/81 (caret's stratification rounding). Python 50 instead yields 195/84; neither is 80/20. Exact historical sample membership is unavailable. |
-| C12 — Results p4; Fig. 4B p5 | RF/SVM accuracy ~98.8%, macro F1 ~.98/.981 | ML 3/10 and 71/72; 120 repeats fits; 2 hardcodes summary bars | **Historical-only:** RF/SVM .9876543=80/81, macro F1 .9805097. Source/saved metrics agree at manuscript precision; no fresh four-model fitting evidence was supplied or identified in the inspected evidence. Cell 2 is a literal summary, not computed evidence. Manu 58 RF instead 79/81 (.975); that older branch is **discrepant** as an explanation of the manuscript's RF number. |
-| C13 — same locations | LR accuracy ~96.3%, macro F1 ~.92/.925 | ML 17,73 and 120; summary 2 | **Historical-only:** 78/81=.962963, macro F1 .9248918. Here LR is direct nnet::multinom, MaxNWts=5000. Manu 60 is caret train(method="multinom") with omitted limits and a saved stopping error, so that existing three-model runner cannot reproduce this claim by construction. Changing it silently would erase a real branch difference. |
-| C14 — same locations | XGBoost accuracy ~97.5%, macro F1 ~.97 | ML 23,74 and 120; summary 2; exports 28 | **Historical-only:** 79/81=.9753086, macro F1 .9698322. No XGBoost branch exists in current scripts/baseline/ml.R. The supplied notebook now provides source, but no fresh fit or verified historical fitted-model bytes. |
+| C12 — Results p4; Fig. 4B p5 | RF/SVM accuracy ~98.8%, macro F1 ~.98/.981 | ML 3/10 and 71/72; 120 repeats fits; 2 hardcodes summary bars | **Reproduced** accuracy, macro F1 and full confusion matrices: replay R1 gives RF/SVM .9876543=80/81, macro F1 .9805097, matrices identical to ML 71/72 and 120. Per-class positional AUCs agree with ML 120 but **disagree** with ML 71/72 (see AUC attribution); SVM AUCs use misaligned probability columns. Cell 2 is a literal summary, not computed evidence. Manu 58 RF instead 79/81 (.975), reproduced by Manu run M1; that older branch remains **discrepant** as an explanation of the manuscript's RF number. |
+| C13 — same locations | LR accuracy ~96.3%, macro F1 ~.92/.925 | ML 17,73 and 120; summary 2 | **Reproduced:** replay R1 LR 78/81=.962963, macro F1 .9248918, matrix identical to ML 73/120; positional AUCs agree with both ML 73 and 120. Here LR is direct nnet::multinom, MaxNWts=5000. Manu 60 is caret train(method="multinom") with omitted limits; Manu run M1 reproduced its stopping error (all 75 resample fits: "too many (1408) weights"), so that three-model runner cannot reproduce this claim by construction. |
+| C14 — same locations | XGBoost accuracy ~97.5%, macro F1 ~.97 | ML 23,74 and 120; summary 2; exports 28 | **Reproduced** with reproduction version xgboost 1.7.11.1: replay R1 79/81=.9753086, macro F1 .9698322, matrix identical to ML 74/120; positional AUCs agree with both ML 74 and 120. The manuscript's coarse 1.6 is not recovered: 1.6.0.1 is API-compatible but does not build unmodified here. No historical fitted-model bytes were verified. |
 | C15 — Fig. 4B p5 | .25 chance line for four balanced classes | ML 2 literal chance=1/4; ML 70 count table | **Discrepant** balance description: test classes ER+12, HER2+48, Normal7, TNBC14. .25 is a uniform random-guess reference; the majority-class/no-information accuracy is 48/81=.5925926. Neither line proves independent predictive usefulness. |
-| C16 — ML Methods p3 | Model versions caret6.0, RF4.7, e1071.7, nnet7.3, xgboost1.6 and saved reproducibility objects | ML library/install history and 8,13,20,28 CSV writes; Manu 48/52 bridge saves | **Historical-only** coarse version statements, not an exact recoverable lock/session. CSV writes are source intentions, not verified files. The scoped earlier absent-file search is documented in the ML spec; no new global search or assertion of absence was made. Saved final panel is real; WGCNA_ML_inputs.RData cannot be presumed available. |
+| C16 — ML Methods p3 | Model versions caret6.0, RF4.7, e1071.7, nnet7.3, xgboost1.6 and saved reproducibility objects | ML library/install history and 8,13,20,28 CSV writes; Manu 48/52 bridge saves | **Historical-only** coarse version statements, not an exact recoverable lock/session. Reproduction versions (randomForest 4.7-1.2, caret 7.0-1, e1071 1.7-17, nnet 7.3-20, pROC 1.19.1, xgboost 1.7.11.1) are new locks, not recovered history. Replay R1 rewrote the 8/13/20/28 CSVs from fresh predictions; historical CSV files remain unverified. The scoped earlier absent-file search is documented in the ML spec; no new global search or assertion of absence was made. Saved final panel is real; WGCNA_ML_inputs.RData cannot be presumed available. |
 | C17 — Methods p3; Results/Discussion pp4,6–7 | Independently validated predictive/clinical power and robustness | Full-cohort Manu preprocessing/WGCNA/panel precedes ML split; ML 70 | **Unsupported** inference: full-cohort label-informed feature selection, full-cohort preprocessing, random sample split without patient/study grouping, known repeated patients and study–label confounding. Normal is a tissue category, not an intrinsic tumour subtype. Even exact metric reproduction would not establish independent/clinical validation. |
 | C18 — abstract p1; Results p4; Discussion pp6–7 | 48% literature-supported hubs, endocrine resistance34%, HER2 immune >50%, random-gene enrichment significance | PDF prose/references; no corresponding computation in selected Manu or ML branch | **Unsupported** as reproducible quantitative results in supplied evidence: no gene-level adjudication ledger, denominator/overlap rules, query history, random comparison sample/statistic or test output was identified. Citations alone cannot establish these fractions or enrichment. No literature research was conducted here. |
 | C19 — Figs. 4A/4C p5, Fig. 5 p6; Discussion pp6–7 | Biological network diagrams, actionable targets, liquid biopsy/drug utility and mechanistic/clinical benefit | PDF captions; ML 75–77 importance and 79/124–125 overlap are different analyses | **Unsupported** from this reproduction evidence: exact diagram construction, edge threshold/layout/annotation and clinical/functional validation are not supplied by those importance/overlap cells. Literature hypotheses need a separate evidence ledger; no assay/trial validity follows from these fitted-expression classifiers. |
@@ -117,23 +120,36 @@ Macro F1 values .9805097/.9805097/.9248918/.9698322 are printed in ML
 3/10/17/23; their rounded display explains cell 2 and Fig. 4B. Arithmetic from
 these confusion matrices supports the correspondence; it is not new prediction.
 
-Do not import Manu's printed perfect AUCs into this notebook. ML 71–74 record,
-in that class order:
+Do not import Manu's printed perfect AUCs into this notebook. The notebook holds
+**two saved sets** of positional per-class AUCs for this branch: the split cells
+ML 71–74 and the combined cell ML 120 (SHA-256
+`a7006a01515d315d478dbbaf5e5e4cf5cdfa6c1fd18ec40b08a7f2d16b12fc6f`; a separate
+cell whose text differs from 68–74 but carries the same four-model spine). In
+class order ER+, HER2+, Normal, TNBC, compared with replay R1 at the seven
+printed significant digits (agreement = |difference| < 5e-8):
 
-| Model | ER+ | HER2+ | Normal | TNBC |
-| --- | ---: | ---: | ---: | ---: |
-| RF | .9818841 | 1 | 1 | .9978678 |
-| SVM | .7934783 | .9772727 | .7239382 | .7857143 |
-| LR | .9263285 | 1 | .9980695 | .9861407 |
-| XGB | .9794686 | 1 | 1 | .9904051 |
+| Model | ML 71–74 (split cell) | ML 120 | Replay R1 | R1 vs split cell | R1 vs 120 |
+| --- | --- | --- | --- | --- | --- |
+| RF | 71: .9818841, 1, 1, .9978678 | .9903382, 1, 1, .9978678 | .9903382, 1, 1, .9978678 | disagree (ER+ .00845) | agree |
+| SVM | 72: .7934783, .9772727, .7239382, .7857143 | .7971014, .9753788, .7413127, .7910448 | .7971014, .9753788, .7413127, .7910448 | disagree (max .0174) | agree |
+| LR | 73: .9263285, 1, .9980695, .9861407 | same as 73 | same as 73 | agree | agree |
+| XGB | 74: .9794686, 1, 1, .9904051 | same as 74 | same as 74 | agree | agree |
 
-These are **historical-only** printed outputs. SVM ROC messages include reversed
-directions. Source indexes probability columns positionally while labels follow
-factor/model.matrix order; actual SVM probability column order must be captured.
-Misalignment is a plausible explanation for anomalous AUCs, not established
-without fitted probabilities. Preserve source-derived values and flag ordering
-failures; a named-column repair is a separately identified correction. The source
-also leaves ROC levels/direction automatic and max.col tie handling omitted.
+ML 71/72 and ML 120 therefore disagree with each other for RF and SVM AUCs, while
+their printed accuracies, confusion matrices and (ML 70/120) split counts agree.
+Both are **historical-only** saved outputs; neither is preferred. No cause for the
+difference between the two saved sets is asserted. The replay runner's built-in
+AUC checkpoint used ML 71–74 and so reports RF/SVM `differs_from_checkpoint`;
+that label is correct for those cells and is not a disagreement with ML 120.
+
+SVM ROC messages include reversed directions in ML 72, ML 120 and R1. R1 captured
+the actual SVM probability column order **Normal, ER+, TNBC, HER2+** against
+positional labels ER+, HER2+, Normal, TNBC, so the SVM positional AUCs pair
+classes with the wrong columns (R1 diagnostic `column_alignment = mismatch`).
+RF and LR columns are aligned; XGB's source reshape leaves them unlabelled. The
+faithful values are preserved; a named-column repair is a separately identified
+correction. The source also leaves ROC levels/direction automatic and max.col tie
+handling omitted.
 
 ## Smallest coherent four-model R workflow
 
@@ -178,16 +194,11 @@ The minimal execution contract requiring review is:
    read-backs and finalize a manifest/audit record in a new ignored run directory.
    Mixed failures remain explicit; no original WGCNA marker/manifest is changed.
 
-This four-model route is **not implemented by** the current three-model
-`scripts/baseline/ml.R`. That source-faithful older runner must be preserved.
-The existing [implementation handoff](baseline-ml-implementation.md) and planner
-cover its four missing direct packages but not XGBoost; this reconciliation is a
-proposed bounded scope amendment requiring Claude/Samuel approval before coding
-or dependency preparation. Add XGBoost and required dependencies to a separately
-reviewed extension plan/lock without replacing any of the 113 baseline records.
-The manuscript's coarse xgboost1.6 is not proof of an available exact build for
-R4.5.2; inspect the selected version's prediction shape/API and native build needs
-before execution, without silently rewriting the source for a newer interface.
+This four-model route is implemented separately by
+`scripts/baseline/manuscript-ml.R` ([handoff](baseline-manuscript-ml.md)); the
+source-faithful older three-model `scripts/baseline/ml.R` is preserved unchanged.
+XGBoost 1.7.11.1 was added in a separate reviewed lock that retains all 149 Manu
+extension records, including the 113 baseline records.
 
 Selected-cell source hashes (UTF-8 source strings concatenated exactly):
 
@@ -203,13 +214,10 @@ Selected-cell source hashes (UTF-8 source strings concatenated exactly):
 
 ## Minimal remaining execution and baseline closure
 
-After independent review, the missing numerical execution is **one fresh,
-provenance-captured four-model R run on the existing 350-gene panel**, not both
-R histories plus Python, not a tuning campaign or repeatability experiment.
-First prepare/review the exact dependency extension and bounded four-model
-implementation; neither exists ready for this branch today. A separate older
-three-model replay is only needed if its distinct subtask is explicitly retained,
-not to explain the manuscript's four-model results.
+The one fresh, provenance-captured four-model R run on the existing 350-gene
+panel has been executed once (R1, below); no tuning, repeatability experiment,
+Python branch or second R history was run. The older three-model replay (M1) was
+executed separately for its own subtask.
 
 Use existing WGCNA audit/recovery evidence; do not reconstruct its network to
 change the original failed status or fill impossible live-object identity checks.
@@ -222,8 +230,56 @@ open-ended obligation to run new biology to close a **baseline** ledger.
 
 Successful baseline closure can mean reproduced checkpoints **or documented
 failure/discrepancy**, with explicit review acceptance. It never means that the
-manuscript's independent/clinical validation claims have been validated. No
-current ML performance result is classified reproduced in this document.
+manuscript's independent/clinical validation claims have been validated. ML
+accuracy, macro F1 and confusion matrices are now classified reproduced for the
+manuscript R branch (C12–C14); RF/SVM AUC agreement depends on which saved
+notebook cell is compared, and both are recorded.
+
+## Executed replay results
+
+Both runs were executed once from clean committed trees on `analysis/initial-review`.
+Evidence paths and SHA-256 values are listed in the
+[release inventory](baseline-release-inventory.md).
+
+**R1 — four-model manuscript replay.** Commit
+`40926994f7e45aa2eb8dce8657a490f51d1316c3`; run
+`Results/baseline_manuscript_ml/run-20261026T113840Z-17527/`; exit 0,
+`workflow_status = finished_all_models_succeeded`, `diagnostic_status =
+review_required` (SVM column mismatch; XGB unlabelled). Split 198/81 with training
+30/115/19/34 and test 12/48/7/14 (ER+, HER2+, Normal, TNBC) matches ML 70.
+
+| Model | Status | Accuracy | Macro F1 | Accuracy/F1 | Confusion | Positional AUC |
+| --- | --- | ---: | ---: | --- | --- | --- |
+| RF | succeeded | .9876543 (80/81) | .9805097 | match | match | ML 120 agree; ML 71 disagree |
+| SVM | succeeded | .9876543 (80/81) | .9805097 | match | match | ML 120 agree; ML 72 disagree |
+| LR | succeeded | .9629630 (78/81) | .9248918 | match | match | ML 73 and 120 agree |
+| XGB | succeeded | .9753086 (79/81) | .9698322 | match | match | ML 74 and 120 agree |
+
+Finalisation/integrity: 42-entry `artifact_checksums.csv` (SHA-256
+`f145768b36ad16fba24fd893fcffe2a4612c5ffb2ea0470ae2dd4ada03ad2e7c`)
+independently re-verified for exact file set, byte counts and hashes;
+`review-finalization.json` records that manifest hash; no
+`finalization_failure.txt` and no COMPLETED by design. RNG state was identical at
+every model boundary; no warnings. The run recorded xgboost 1.7.11.1, the
+manuscript lock (`c5f429e1…`) and the API review record (`f38de57d…`). Console,
+timing and exit-code logs are in the manuscript dependency bundle
+(`execution-logs/`): 10.19 s wall clock, 558,412 kB maximum resident set size.
+
+**M1 — older three-model Manu replay.** Commit
+`db8fb67a089842d3c07359dfd24ca2dee1ad2ae7`; run
+`Results/baseline_ml/run-20261026T073318Z-86649/`; exit 3,
+`finished_with_model_failure`. RF 79/81 and SVM 80/81 succeeded with confusion
+matrices and printed AUCs matching Manu 58/59; caret LR failed in training
+(Manu 60's error class reproduced). 31-entry manifest
+`1b50e012044a64402a74f323412627461eb05e085dc97bc7a8d0c2cd60c40163` verified. Its
+external console/timing logs were not preserved (see inventory); in-run
+execution.log and provenance survive.
+
+Limitations of both runs: inputs are the pinned preprocessing RDS (full
+precision), not the historical `/content/*.csv` files; package versions are
+reproduction locks, not recovered sessions; matching metrics do not establish
+historical sample membership or fitted-model identity; leakage, repeated-patient
+and study/category confounding limits (C17) are unchanged.
 
 ## Checks performed for this document
 
@@ -237,26 +293,45 @@ IDs, selected cell hashes, local documentation link targets and whitespace.
 No source notebook, R runner, audit, recovery or model was executed. Only this
 new document is changed; temporary text extraction stayed under /tmp.
 
+## Checks performed for the post-execution update
+
+Read-only: compared R1 saved evidence with every saved ML cell output containing
+the AUC values (only ML 71–74 and 120 do), at |difference| < 5e-8; re-verified the
+R1 and M1 manifests; re-checked the WGCNA archive against its SHA-256 sidecar and
+generated the inventory hashes. No model, preprocessing or WGCNA step was run.
+
+## RC1 dispositions and patient-overlap completion
+
+The current release request accepts preservation of the two conflicting
+historical AUC sets without preference, the reproduced SVM column defect,
+incomplete original WGCNA plus separate recovery, unsupported claims remaining
+unsupported, and lost external Manu logs with surviving in-run evidence. These
+are baseline dispositions, not approval of independent or clinical validity.
+[RC1](baseline-release-candidate.md) records the exact narrowed acceptance:
+**one-command verification of frozen evidence**, never a clean-clone rebuild.
+Stage replay instructions remain [separate](baseline-stage-replay.md).
+
+The required read-only audit now joins both saved split ID sets to
+sample_provenance.csv: M1 shares 28 reported patients across training/test; R1
+shares 31. Both have 88 training and 33 test samples with unknown patient identity.
+Exact IDs, partitions and source hashes are preserved in
+release/baseline-rc1/patient-audit/. This establishes known leakage, not
+independence among samples without reported identity. Neither model was refitted.
+
 ## Finite release checklist
 
-- [ ] Claude reviews C01–C19 and the selected ML source hashes; resolve or explicitly
-  accept each classification and the PDF mathematical/visual inspection limits.
-- [ ] Samuel/ChatGPT approves the four-model scope and explicit bridge/class-order/
-  RNG policy; keep the older baseline code and original evidence unchanged.
-- [ ] Review the exact dependency additions including XGBoost, source hashes,
-  native requirements, separate extension lock and all 113 unchanged records.
-- [ ] Implement/review only the agreed four-model runner and non-training fixtures;
-  verify source fidelity, input hashes/order, serialization, branch failures,
-  probability class alignment, RNG continuity and output isolation.
-- [ ] Authorize and execute once; retain all four outcomes or actual blocked/failure
-  diagnostics, split IDs, predictions, probabilities, versions, defaults and logs.
-- [ ] Independently verify outputs/manifest and metrics from saved predictions;
-  compare checkpoint precision without forcing equality; regenerate measured Fig.4B
-  or mark missing. Keep original WGCNA incomplete and recovery provenance separate.
-- [ ] Resolve saved-artifact-only upstream gaps; assign final accepted disposition
-  to every discrepancy/unsupported claim, including literature and clinical claims.
-  Obtain scientific approval for manuscript changes rather than editing source
-  choices or inventing historical explanations.
-- [ ] Freeze a reviewed baseline evidence/limitations ledger and release inventory;
-  mark corrected validation as a separate future task. Commit/push/tag require
-  separate explicit authorisation and are not performed by this checklist.
+- [x] Four-model source, dependencies, execution and saved metrics reviewed as
+  recorded above; retain all source and probability-order limitations.
+- [x] Known/unknown patient identity audited from saved IDs for both ML runs.
+- [x] Exact locks and XGBoost review/build references preserved in release paths.
+- [x] Conflicting historical AUCs, SVM defect, incomplete WGCNA, unsupported claims
+  and surviving-versus-lost Manu evidence have explicit accepted baseline dispositions.
+- [x] Acceptance narrowed to frozen-evidence verification; stage replay separate.
+- [x] Implement a portable local layout and verifier; the actual local verification
+  verdict is recorded in release/baseline-rc1/verification-result.json, not inferred
+  from any all-stage-success claim.
+- [ ] Claude reviews RC1, verifier, frozen index and limitations independently.
+- [ ] Establish archival custodian/retention and verify a second preserved copy
+  after authorised transfer. No public location is assumed.
+- [ ] Obtain separate commit/push/tag authority. Corrected scientific validation
+  remains a distinct future task and is not part of this release acceptance.

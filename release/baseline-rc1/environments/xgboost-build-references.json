@@ -1,0 +1,61 @@
+{
+  "selected_xgboost_version": "1.7.11.1",
+  "baseline_records": 113,
+  "retained_manu_records": 149,
+  "manuscript_records": 150,
+  "interpretation": "Exact copies of reviewed reproduction locks; candidate/build evidence is archived, not executed by the release verifier.",
+  "files": {
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/xgboost-api-review.json": {
+      "sha256": "f38de57de52c05258fd7bb5b22ce280cae5118137cabf6b0bc3ae49437f3deba",
+      "bytes": 519
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/xgboost-api-findings.txt": {
+      "sha256": "981bf91a3530f90c1dc96d14f579da4cf92e3fdc2ec7ead3013cf75997e61c6a",
+      "bytes": 4917
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/install.log": {
+      "sha256": "1692da3799fb888fced395189ad02445dbfdfbb5f44fe36a5aba56de1b7b87bb",
+      "bytes": 58554
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/install-1.6.0.1-failed.log": {
+      "sha256": "44bbe48cb67e02cff68a99ddba9e643f84f70ffed8c4382bcee0d7dd9ef096e6",
+      "bytes": 26406
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/installed-xgboost.lock": {
+      "sha256": "f33e8bc410756d1252a4ba95889500e511d9922b4c778b1aa1c6e42c45863015",
+      "bytes": 21867
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/manuscript-renv.lock": {
+      "sha256": "c5f429e188bdd0ea68f9ad76e8e01017a44e9ed150db38298c3ec3c940675cb6",
+      "bytes": 325395
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/execution-logs/commit.txt": {
+      "sha256": "f2ed5a2a6910a48029d73e77fe9a8db635479a39303d177c2303b5a423f4ff8f",
+      "bytes": 41
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/execution-logs/console.log": {
+      "sha256": "2b376da3594d817fecbff1dbd4b19af4401d6404a07b9da6691622f4fde5ab62",
+      "bytes": 9048
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/execution-logs/exit-code.txt": {
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/execution-logs/time.log": {
+      "sha256": "a9578004ff47c348ad430b208c9ad2027d4a3c198c4ad94da1c99cd548b83f4c",
+      "bytes": 1187
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates/3.2.1.1/tarball/xgboost_3.2.1.1.tar.gz": {
+      "sha256": "54f3f59aa5689117977aab725b6bda88db71fff4b1b6d92289f81cb10bcee2a5",
+      "bytes": 1625267
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates/1.7.11.1/tarball/xgboost_1.7.11.1.tar.gz": {
+      "sha256": "c15b631be77ae17fef46166abffb3336738a812c219d82c601bc70664a88d7c5",
+      "bytes": 1085939
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates/1.6.0.1/tarball/xgboost_1.6.0.1.tar.gz": {
+      "sha256": "9ae99a20997e1b02ffd21cabada2a55e53f5754746238ee900de5eb6cd964ebd",
+      "bytes": 1062074
+    }
+  }
+}

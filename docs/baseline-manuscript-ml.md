@@ -249,3 +249,49 @@ Whitespace checks cover tracked/staged changes and every new deliverable.
 These code checks fitted no model. Dependency preparation (xgboost 1.7.11.1 only,
 separate manuscript lock) was performed separately in the bundle above; the
 manuscript checks and Manu regressions passed again afterwards.
+
+## Execution record (26 October 2026)
+
+Executed once from a clean tree at commit
+`40926994f7e45aa2eb8dce8657a490f51d1316c3` on `analysis/initial-review`, with the
+resolved command above. No tuning, retry or analytical-cell change.
+
+- Run directory: `Results/baseline_manuscript_ml/run-20261026T113840Z-17527/`.
+- Exit code 0; `workflow_status = finished_all_models_succeeded`;
+  `diagnostic_status = review_required`; no failed stages or warnings.
+- Console, `/usr/bin/time -v` output, exit code and commit:
+  `/home/samuel/env-records/manuscript-ml-dependencies-20261026T105445Z-4475/execution-logs/`
+  (10.19 s wall clock; 558,412 kB maximum resident set size).
+
+| Model | Accuracy | Macro F1 | Confusion vs ML 71–74 / 120 | Positional AUC (ER+, HER2+, Normal, TNBC) |
+| --- | ---: | ---: | --- | --- |
+| RF | .9876543 | .9805097 | match / match | .9903382, 1, 1, .9978678 |
+| SVM | .9876543 | .9805097 | match / match | .7971014, .9753788, .7413127, .7910448 |
+| LR | .9629630 | .9248918 | match / match | .9263285, 1, .9980695, .9861407 |
+| XGB | .9753086 | .9698322 | match / match | .9794686, 1, 1, .9904051 |
+
+Positional AUCs agree with saved ML 120 for all four models and with ML 73/74,
+but disagree with ML 71 (RF ER+) and ML 72 (all SVM classes). The runner's
+built-in AUC checkpoint used ML 71–74, so its final JSON reports RF/SVM
+`positional_source_auc = differs_from_checkpoint`. Per-cell attribution is in
+the [reconciliation](baseline-result-reconciliation.md#separate-historical-branches-and-numerical-checkpoints);
+neither saved set is preferred and no cause is asserted.
+
+Class-alignment diagnostics (separate from the faithful AUCs; nothing relabelled):
+RF and LR probability columns are aligned; SVM columns are **Normal, ER+, TNBC,
+HER2+**, so its positional AUCs pair classes with the wrong columns; XGB columns
+are unlabelled by the source reshape. All four probability matrices are 81×4,
+finite and row-normalised.
+
+Integrity: the 42-entry `artifact_checksums.csv` (SHA-256
+`f145768b36ad16fba24fd893fcffe2a4612c5ffb2ea0470ae2dd4ada03ad2e7c`) was
+independently re-verified for exact file set, byte counts and hashes, and matches
+`review-finalization.json`. The Manu run, Manu lock and manuscript lock were
+unchanged by hash afterwards.
+
+Limitations: pinned full-precision RDS inputs replace the historical
+`/content/*.csv` files; package versions are reproduction locks (xgboost 1.7.11.1,
+not the coarse historical 1.6); metric agreement does not establish historical
+sample membership, sessions or fitted-model identity; the SVM column mismatch is a
+reproduced source defect, not corrected here; leakage, repeated-patient and
+study/category confounding limits remain. This is not independent validation.

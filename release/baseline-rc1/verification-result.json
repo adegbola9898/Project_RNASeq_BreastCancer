@@ -1,0 +1,59 @@
+{
+  "acceptance": "frozen_evidence_only",
+  "integrity": "verified",
+  "clean_clone_rebuild": "not_established",
+  "scientific_validation": "not_established",
+  "files": 274,
+  "payload_bytes": 2731552296,
+  "locks": {
+    "baseline": 113,
+    "manu": 149,
+    "manuscript": 150,
+    "xgboost": "1.7.11.1"
+  },
+  "M1": {
+    "workflow_status": "finished_with_model_failure",
+    "models": {
+      "RF": "succeeded",
+      "SVM": "succeeded",
+      "logistic": "training_failed"
+    },
+    "diagnostic_status": "not_applicable",
+    "verified_artifacts": 31
+  },
+  "R1": {
+    "workflow_status": "finished_all_models_succeeded",
+    "models": {
+      "RF": "succeeded",
+      "SVM": "succeeded",
+      "LR": "succeeded",
+      "XGB": "succeeded"
+    },
+    "diagnostic_status": "review_required",
+    "verified_artifacts": 42
+  },
+  "preprocessing": "completed_saved_provenance",
+  "patient_overlap": {
+    "M1": {
+      "known_shared_patient_count": 28,
+      "unknown_patient_counts": {
+        "train": 88,
+        "test": 33
+      }
+    },
+    "R1": {
+      "known_shared_patient_count": 31,
+      "unknown_patient_counts": {
+        "train": 88,
+        "test": 33
+      }
+    }
+  },
+  "WGCNA": {
+    "classification": "incomplete",
+    "verified_artifacts": 27,
+    "monitoring_status": "complete",
+    "aggregate_memory_peak_bytes": 23359385600
+  },
+  "preservation": "required local payload and archived deployed/recovery tooling verified; off-host custody not established"
+}

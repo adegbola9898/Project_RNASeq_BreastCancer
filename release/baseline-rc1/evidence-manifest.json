@@ -1,0 +1,1104 @@
+{
+  "files": {
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates.sha256": {
+      "bytes": 350,
+      "sha256": "fe2a6a875368b4bce23f50b15e3602258b47c5a8df08c22c80d398d6554ea7b8"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates/1.6.0.1/source-url.txt": {
+      "bytes": 79,
+      "sha256": "aa876cfd8ea9301f5e44b0c677592d6756732ee605adaaeda01852b6374024a7"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates/1.6.0.1/tarball/xgboost_1.6.0.1.tar.gz": {
+      "bytes": 1062074,
+      "sha256": "9ae99a20997e1b02ffd21cabada2a55e53f5754746238ee900de5eb6cd964ebd"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates/1.7.11.1/source-url.txt": {
+      "bytes": 80,
+      "sha256": "adc67506e5cfdf1262fe8710b7fc1857d0faf6c19156cca505b623801561409e"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates/1.7.11.1/tarball/xgboost_1.7.11.1.tar.gz": {
+      "bytes": 1085939,
+      "sha256": "c15b631be77ae17fef46166abffb3336738a812c219d82c601bc70664a88d7c5"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates/3.2.1.1/source-url.txt": {
+      "bytes": 63,
+      "sha256": "9f789cb180cd14b5e1954254e284c5568a523697451d39dfa6d012cf90a0d5a6"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/candidates/3.2.1.1/tarball/xgboost_3.2.1.1.tar.gz": {
+      "bytes": 1625267,
+      "sha256": "54f3f59aa5689117977aab725b6bda88db71fff4b1b6d92289f81cb10bcee2a5"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/check-closure.R": {
+      "bytes": 1917,
+      "sha256": "0fb57c7acd183bf9cdbb3cf761dfe1cbbaaeb0a5550f5c3c46d14f27acda6a8e"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/evidence.sha256": {
+      "bytes": 1413,
+      "sha256": "53773656f580330ad533c05b8159ff59013427d6121ea99c9d4db01adfeb6a98"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/execution-logs/commit.txt": {
+      "bytes": 41,
+      "sha256": "f2ed5a2a6910a48029d73e77fe9a8db635479a39303d177c2303b5a423f4ff8f"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/execution-logs/console.log": {
+      "bytes": 9048,
+      "sha256": "2b376da3594d817fecbff1dbd4b19af4401d6404a07b9da6691622f4fde5ab62"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/execution-logs/exit-code.txt": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/execution-logs/time.log": {
+      "bytes": 1187,
+      "sha256": "a9578004ff47c348ad430b208c9ad2027d4a3c198c4ad94da1c99cd548b83f4c"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/git-before.txt": {
+      "bytes": 289,
+      "sha256": "034784e7c97fed2db17a51ac7418b1f05d2400d885c020a3ad6e91f3b5a93d1d"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/install-1.6.0.1-failed.log": {
+      "bytes": 26406,
+      "sha256": "44bbe48cb67e02cff68a99ddba9e643f84f70ffed8c4382bcee0d7dd9ef096e6"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/install-xgboost.R": {
+      "bytes": 937,
+      "sha256": "26fc7d0acb2297498b5a668290d1337c003b7efd3ff9ce699e7cd478c1e94c90"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/install.log": {
+      "bytes": 58554,
+      "sha256": "1692da3799fb888fced395189ad02445dbfdfbb5f44fe36a5aba56de1b7b87bb"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/installed-xgboost.lock": {
+      "bytes": 21867,
+      "sha256": "f33e8bc410756d1252a4ba95889500e511d9922b4c778b1aa1c6e42c45863015"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/make-manuscript-lock.R": {
+      "bytes": 1920,
+      "sha256": "a1b3209c44095efa818cf53c0d984ccad4176080b03b3f8cff9d329e509ff740"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/make-manuscript-lock.log": {
+      "bytes": 2640,
+      "sha256": "93d68d414a37ec496acf627e4cd19894d481b59a861fae45c4f424618539d5b7"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/manuscript-renv.lock": {
+      "bytes": 325395,
+      "sha256": "c5f429e188bdd0ea68f9ad76e8e01017a44e9ed150db38298c3ec3c940675cb6"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/protected-before.sha256": {
+      "bytes": 462,
+      "sha256": "8735cee1af70cbc53410631a6d2651eea95b42cb3505a9b4458178eb1ff5e700"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/xgboost-1.6.0.1-closure.csv": {
+      "bytes": 263,
+      "sha256": "98dfce8bf298b80fd4f7e9aa15e59e7b4899f16f42dd1d7e12bbf6f1e47d44be"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/xgboost-1.7.11.1-closure.csv": {
+      "bytes": 263,
+      "sha256": "98dfce8bf298b80fd4f7e9aa15e59e7b4899f16f42dd1d7e12bbf6f1e47d44be"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/xgboost-api-findings.txt": {
+      "bytes": 4917,
+      "sha256": "981bf91a3530f90c1dc96d14f579da4cf92e3fdc2ec7ead3013cf75997e61c6a"
+    },
+    "dependencies/manuscript-ml-dependencies-20261026T105445Z-4475/xgboost-api-review.json": {
+      "bytes": 519,
+      "sha256": "f38de57de52c05258fd7bb5b22ce280cae5118137cabf6b0bc3ae49437f3deba"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/CRAN-PACKAGES.rds": {
+      "bytes": 1709627,
+      "sha256": "dbcb081168e3d794f5f5867235a136fc0bf6089f2dd38e52312d576554a566b0"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/baseline-library-before.csv": {
+      "bytes": 18288,
+      "sha256": "eaa70b59dd23df9640f236a6fd724253bdb35a241022a549621e7c384135c29e"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/caret-source-findings.txt": {
+      "bytes": 1529,
+      "sha256": "8e9f07d77edc10a51f7c38a00f1e44224f2739ab991ca6894002b81b03f2d556"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/evidence.sha256": {
+      "bytes": 1036,
+      "sha256": "a62856649808adadb15617fbbea3f2dee5f6218bf508e67718cbd475d638d310"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/execution-logs/NOTE.txt": {
+      "bytes": 1512,
+      "sha256": "8093d10987e5012e11566aa8ba8f45de267adea651e6c857a60c118c107dbcbc"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/git-status-before.txt": {
+      "bytes": 243,
+      "sha256": "f60647b0670349976bd6131fbd9e2fc3a02b45aa0c8776957145681d050baf6f"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/install-additions.R": {
+      "bytes": 3645,
+      "sha256": "a58822066cfcac26c5de011be0655104e72f52314770083c6d339c95025eb4d0"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/install-attempt1.log": {
+      "bytes": 4293,
+      "sha256": "93d2d41bf15e44b556519c711880e57cb4e2b37aab8983100cf32afe98617268"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/install-order.txt": {
+      "bytes": 284,
+      "sha256": "018d1726d48be6a3cacbe8f6a364a338206a2effee673eccef864f6701acad03"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/install.log": {
+      "bytes": 116524,
+      "sha256": "f321a5af22ee60d06d11b9513696cbbca9ea9a906ba7f7c2e6a843cc6f5c570f"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/installed-additions.lock": {
+      "bytes": 155792,
+      "sha256": "c9e5f0925af440eef121ecc5aa90c8045c468454141ac05c23f214d879fc3fe8"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/library-after-install.csv": {
+      "bytes": 25071,
+      "sha256": "c82a72e91045fed4ce314255146a748c2b55d340b0e23260020d8643d9a81c92"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/library-paths.txt": {
+      "bytes": 314,
+      "sha256": "0e59108206b210aa84446408244347cde6b09a0ed7239b46a28e17c5ffbf0184"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/make-ml-lock.R": {
+      "bytes": 1773,
+      "sha256": "78ed6177d76eeb66040c8c6af2e713769a208dc750b545165c0ee960c3b97ce7"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/make-ml-lock.log": {
+      "bytes": 2922,
+      "sha256": "31dbe326b790f1300d56b39739101bf008af9cfd682afc73a220d69936816ed4"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/metadata-origin.rds": {
+      "bytes": 2862,
+      "sha256": "dafbe6812a568a9a215d0ced5c9305f6d76ef6170490d857c982a483d3002e38"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/metadata.sha256": {
+      "bytes": 298,
+      "sha256": "7568e491f496dc4096ddcd06d1ed5bc83951fbe013b8eab74bef58464571b762"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/ml-renv.lock": {
+      "bytes": 321930,
+      "sha256": "4f7afa2d47ab3a43d0b1836887e842fc60f911b57d5a197bc16abbbc00b3ef85"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/plan/additions.csv": {
+      "bytes": 697,
+      "sha256": "ca90fbaefb0d23dba0ecb6aae0ce0b9add4aa3763c2c91f5b2d5251db374e664"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/plan/dependency-plan.rds": {
+      "bytes": 2267,
+      "sha256": "932ca25d818b1e362f3529c61d158a5aef268eb16a308232a79c7662bdfcd8fe"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/plan/dependency-plan.txt": {
+      "bytes": 13976,
+      "sha256": "de985d21cb0bae702238b54c1776223bc0608f166ac34baf80f6c806ca9abdea"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/protected-before.sha256": {
+      "bytes": 319,
+      "sha256": "f29a133684f7dda08db62d129e04af939562de3a82a70bcd0bef34c0cf8d9707"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/sessionInfo-before.txt": {
+      "bytes": 853,
+      "sha256": "fe4923063f7f1b63660d978e637e81d4c211ed15d0048d709cf5de20699818dc"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/source-tarballs.csv": {
+      "bytes": 4235,
+      "sha256": "5e07336d959db63f68c08062ca0f2898b99ad17192618179f5e5ff23ded1aec6"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/source-tarballs.sha256": {
+      "bytes": 3161,
+      "sha256": "64f290893c23b07378548539ccba08f177ee2f59e2d517194eea9a56a4368f18"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/KernSmooth_2.23-27.tar.gz": {
+      "bytes": 27615,
+      "sha256": "d501066a63959bee97d1ce7c556cb90862b3261fa6fc1c3cf8e5b2cdea2cc70d"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/MASS_7.3-66.tar.gz": {
+      "bytes": 510345,
+      "sha256": "59c619c70bfca653f1c74aef880e69405daefd0134e716a1862ecc5334b4e155"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/ModelMetrics_1.2.2.2.tar.gz": {
+      "bytes": 17078,
+      "sha256": "5e06f1926aebca5654e1329c66ef19b04058376b2277ebb16e3bf8c208d73457"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/SQUAREM_2026.1.tar.gz": {
+      "bytes": 240392,
+      "sha256": "e9b32a384876b3a6646ea4262aedd738292220cd1852b2a289855606f56cfcad"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/caret_7.0-1.tar.gz": {
+      "bytes": 2273919,
+      "sha256": "d1ea51a8ce1948718b424bacda84428bd397d8b7869310a96311553d329a815c"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/class_7.3-24.tar.gz": {
+      "bytes": 22115,
+      "sha256": "e8c66e57e3f4214ced6fff135a0d9b55f7bd7d6c947b219063de57b275c507e1"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/clock_0.7.4.tar.gz": {
+      "bytes": 560532,
+      "sha256": "13763c5da610f2db016d2af16d83aecc76b411738aabd750188222a28a2397ca"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/diagram_1.6.5.tar.gz": {
+      "bytes": 536872,
+      "sha256": "e9c03e7712e0282c5d9f2b760bafe2aac9e99a9723578d9e6369d60301f574e4"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/e1071_1.7-17.tar.gz": {
+      "bytes": 318056,
+      "sha256": "6debc371ad478c2aa6de1f6510e254e80e797de4974b855f63b35509a3c2ac87"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/future.apply_1.21.0.tar.gz": {
+      "bytes": 81717,
+      "sha256": "4142c0d68cc247099b32d558d84fa8f6406b5f44f661494820ed5758484444e5"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/future_1.80.0.tar.gz": {
+      "bytes": 488869,
+      "sha256": "95ee7292883e891770a927b29b57282011533256473e8d4db8436b46ee1f1d77"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/globals_0.20.0.tar.gz": {
+      "bytes": 62556,
+      "sha256": "7f59b223a63defb79749d40b6fa89071707b953bd6afd5718d088a712a4b39a7"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/gower_1.0.2.tar.gz": {
+      "bytes": 187966,
+      "sha256": "4fd569a50326133bd5629647ad0581340c9b9f8cd7f95572315f206f78185751"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/hardhat_1.4.3.tar.gz": {
+      "bytes": 628032,
+      "sha256": "59fb0b932286bca7293dbb47169262a7f53890f6d77ca4aada6b247e979936fe"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/ipred_0.9-16.tar.gz": {
+      "bytes": 179935,
+      "sha256": "8ad3a28abb63e3918fd83b153be0a2973d7576ac5e4819473a9c623dcf0d9303"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/lava_1.10.tar.gz": {
+      "bytes": 1278460,
+      "sha256": "9a724588f9b66de1cba785c6029f5e70445e4a27fef887dba6425bd879c3f601"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/listenv_1.1.0.tar.gz": {
+      "bytes": 56056,
+      "sha256": "08ce62df335de0a623c289fcb6e26f883445581377b5c405dbb449c840311760"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/lubridate_1.9.5.tar.gz": {
+      "bytes": 429855,
+      "sha256": "0bc5d10e5a34285d4f9e9c572c058c386b9e1515d8faebc1496b2680138280a8"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/nlme_3.1-171.tar.gz": {
+      "bytes": 854224,
+      "sha256": "481dc8277dd0e0f2717ffb36edfb08141621470de173894fb1153464383ba0d3"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/numDeriv_2016.8-1.1.tar.gz": {
+      "bytes": 76053,
+      "sha256": "d8c4d19ff9aeb31b0c628bd4a16378e51c1c9a3813b525469a31fe89af00b345"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/pROC_1.19.1.tar.gz": {
+      "bytes": 628265,
+      "sha256": "cb1849e8e55c43e15072646757c9c12e3fe7f9b662dd3ff769a7c87bdd32e65c"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/parallelly_1.48.0.tar.gz": {
+      "bytes": 351615,
+      "sha256": "58fe71ccee8e4dc95591958c5428c5000350937024373b99b258a76da0927636"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/plyr_1.8.9.tar.gz": {
+      "bytes": 401488,
+      "sha256": "15b5e7f711d53bf41b8687923983b8ef424563aa2f74c5195feb5b1df1aee103"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/prodlim_2026.03.11.tar.gz": {
+      "bytes": 147490,
+      "sha256": "1364a6f0f77cae22395e8158cca6117e2b4b662146701767c6b65837ecce916a"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/progressr_1.1.0.tar.gz": {
+      "bytes": 665903,
+      "sha256": "55d287b046162f04087308640b03a53160fa92dab7824f0e15efc5f7cb20dd0b"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/proxy_0.4-29.tar.gz": {
+      "bytes": 71437,
+      "sha256": "c6eb0e36ef2eecb1b8564f0188ca8d2c91a80865c86698386a7b5d5baa92c35b"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/purrr_1.2.2.tar.gz": {
+      "bytes": 278508,
+      "sha256": "ac3bc0fc0e789510042522e6c4294336c71447be8f6921b5ef78b9a9fb86617d"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/randomForest_4.7-1.2.tar.gz": {
+      "bytes": 81974,
+      "sha256": "aad33227b648bad50412849d7e0fed00fd07f1d1d4a14fa015b4b9f939b04a11"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/recipes_1.4.0.tar.gz": {
+      "bytes": 899046,
+      "sha256": "6bf58bf3a144617e404c024f8723b090e39fb3f4541c0bbfb9381dc7bba22205"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/reshape2_1.4.5.tar.gz": {
+      "bytes": 38080,
+      "sha256": "0ead5acd0153e5073b3c24e8e782982a4eab3aaa768ba17700d796fb13b68cef"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/shape_1.4.6.1.tar.gz": {
+      "bytes": 646412,
+      "sha256": "43f9bd0f997fd6cf1838efd8b2509c9a6396513f4e54a20360481634affd22a4"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/sparsevctrs_0.3.6.tar.gz": {
+      "bytes": 94020,
+      "sha256": "b5913cb3b7471937d10b7784c78e955f8dc263c15ede4bef85a44c7572240aec"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/tidyr_1.3.2.tar.gz": {
+      "bytes": 809031,
+      "sha256": "04c0e6daf0af682af73763a42c027d7171761cdbdbf9ff7a77a0e421343d665a"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/timeDate_4052.112.tar.gz": {
+      "bytes": 367313,
+      "sha256": "7f5b8e294f9fdf977cb721e711a6fcd664e379ee1b0ddb4c733374940e0e4646"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/timechange_0.4.0.tar.gz": {
+      "bytes": 103966,
+      "sha256": "6dc8ff9d339d3c4cff7ddf3800383f3e94f41c021f6c7bacccf971e187f73feb"
+    },
+    "dependencies/ml-dependencies-20261026T071424Z-77321/src/tzdb_0.5.0.tar.gz": {
+      "bytes": 600718,
+      "sha256": "380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db"
+    },
+    "repository/.Rprofile": {
+      "bytes": 26,
+      "sha256": "3f9d62fc3f1bf5888a09816101b705f9844ef4cd44ee5ad157f4168dac4af4d4"
+    },
+    "repository/.gitignore": {
+      "bytes": 420,
+      "sha256": "8dfd2ab481bd183004cdefc959c87f545e2e2490d87320c82344da97c24eb6a0"
+    },
+    "repository/AGENTS.md": {
+      "bytes": 3001,
+      "sha256": "d473ba23c02511410cb18cde57afe6d7003a0eef1fae77ad55d9f65da1bfd4aa"
+    },
+    "repository/CLAUDE.md": {
+      "bytes": 725,
+      "sha256": "95b11521bd3856783a18506506588dfa0a9b1f251422c0ad4a914bb1aa9174b1"
+    },
+    "repository/Data/Manifests/sample_provenance.csv": {
+      "bytes": 212576,
+      "sha256": "271efb7da58d93cd60574274f6fbdcef8cfb7228bc0f96b8b1664ab8f10d3a37"
+    },
+    "repository/Data/Processed/metadata.csv": {
+      "bytes": 6606,
+      "sha256": "716ede91356d5622d4a3c9ef3004499054ff396bd99674539cbaf2244dd075f6"
+    },
+    "repository/Data/Processed/updated_count_matrix (1).csv": {
+      "bytes": 34180438,
+      "sha256": "5e2b722f8f72d8421069e1bbef693389bb863bf7731553e98b3344693c41fd0d"
+    },
+    "repository/README.md": {
+      "bytes": 1443,
+      "sha256": "e5dc4e3f973eea65ced014f414b577872be754849ff6b3b1f150c584d6102765"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/artifact_checksums.csv": {
+      "bytes": 4239,
+      "sha256": "f145768b36ad16fba24fd893fcffe2a4612c5ffb2ea0470ae2dd4ada03ad2e7c"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/diagnostics/LR_probability_alignment.rds": {
+      "bytes": 310,
+      "sha256": "dda9560a149c57f0b3e6440ec0c36b82bc0cbc1d64a1d11406feba73d14d89e1"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/diagnostics/RF_probability_alignment.rds": {
+      "bytes": 315,
+      "sha256": "86cd091022d5b7a8d53a55c8da22a09af6ab54c16f6321171dae70cb2e63e189"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/diagnostics/SVM_probability_alignment.rds": {
+      "bytes": 324,
+      "sha256": "4c99244ca5815e092372c688c6387f67dbac7c955faa70430c217e0195055000"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/diagnostics/XGB_probability_alignment.rds": {
+      "bytes": 324,
+      "sha256": "c65531938de4e261e9e7db5c07aa37ec577ef7fdc9575a190c18d3fe1838f671"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/diagnostics/feature_name_mapping.csv": {
+      "bytes": 6074,
+      "sha256": "573fb01700d64041197cb3785473b40090b8b92b9b1542191e623094973a966e"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/diagnostics/input_bridge.rds": {
+      "bytes": 1002,
+      "sha256": "fefd7b6f2e98ff9b519b480744416af9a1f3ae97c49c3f02b3a4cb41a1b2b231"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/effective_defaults.rds": {
+      "bytes": 1362,
+      "sha256": "14d83b5091096d90aa904b45ec36cb7fa24d96fe98fb4d9cbff3a2e2b0f7afe7"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/execution.log": {
+      "bytes": 11065,
+      "sha256": "ffff298649fd381e214c1d418fa7c05380a528ed7d77716df9b643974f46151b"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/execution_provenance.rds": {
+      "bytes": 105130,
+      "sha256": "82bb7eb95569f8d9e45fbf2b844cf2627730ada311d0b7348876ed210912b257"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/LR_confusion_matrix.csv": {
+      "bytes": 98,
+      "sha256": "96c3351c64c4d55d093528d9000fa3488c5d9d345518cbd7f20cb8cb9d1dda96"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/LR_evidence.rds": {
+      "bytes": 36391,
+      "sha256": "1368044bd8216fbaadd8e28eadefe55ce5cc6614b3bc28554bed651783df2761"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/LR_per_class_auc.csv": {
+      "bytes": 123,
+      "sha256": "ab0c6fc44ce5bd1b1d79076a6be95766e99fb8803acc2325b7d8a89d6102df0a"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/LR_per_class_metrics.csv": {
+      "bytes": 769,
+      "sha256": "de3a1d58821183e1f063a9864197b187858023dc9aa45898c82141bbcc4ba7f8"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/RF_confusion_matrix.csv": {
+      "bytes": 98,
+      "sha256": "fdae0849f36955b33dc5fea936dc06aa8e79b1b56dce25e2c6f5a4f55a3ce7ab"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/RF_evidence.rds": {
+      "bytes": 151556,
+      "sha256": "fbf78831b9d0ff631c293befd2b1cd903a5157c228fe2e4d463423171d41cc31"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/RF_per_class_auc.csv": {
+      "bytes": 107,
+      "sha256": "43d97692c1ceeb40498680450b51c0e5550b33e01d0bcb28a4c0480c6d299ca5"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/RF_per_class_metrics.csv": {
+      "bytes": 664,
+      "sha256": "c02466b90928d39d0ee2eb01cae7e17e12c8c0d15dc61d4c3304c62444b08243"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/SVM_confusion_matrix.csv": {
+      "bytes": 98,
+      "sha256": "fdae0849f36955b33dc5fea936dc06aa8e79b1b56dce25e2c6f5a4f55a3ce7ab"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/SVM_evidence.rds": {
+      "bytes": 242311,
+      "sha256": "08b887a2fbf149c266b2b6210cd6d2a9f3a0ab27d139a20e4320b1fc62b57cb2"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/SVM_per_class_auc.csv": {
+      "bytes": 139,
+      "sha256": "64703e1ff6a540932c43e4dd1be3e51a928ac576c2d42dbf80bc6f8f589f1886"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/SVM_per_class_metrics.csv": {
+      "bytes": 664,
+      "sha256": "c02466b90928d39d0ee2eb01cae7e17e12c8c0d15dc61d4c3304c62444b08243"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/XGB_confusion_matrix.csv": {
+      "bytes": 98,
+      "sha256": "042669acf2d98434cbd2aade30251e6c5d04774154edaad823b4798c7080d3c7"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/XGB_evidence.rds": {
+      "bytes": 38514,
+      "sha256": "dd04c6c83280cbf272f1f27b51d719e9c66cb2ff5efb248f37c2a1e2f21bc6b8"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/XGB_per_class_auc.csv": {
+      "bytes": 107,
+      "sha256": "507b641508d38efe9e1759e3a761107af3b3d4adb23f4fb2eccfd6e717edbb6b"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/XGB_per_class_metrics.csv": {
+      "bytes": 721,
+      "sha256": "5001997bffa01912b7a0b589e6c1632f963ee40ffb51988917036409aa0d491d"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/input_bridge.rds": {
+      "bytes": 730016,
+      "sha256": "1b690cccd0539bbdcb6a6590a30c70ab425af88aa088de1e841f092cfd5e1f30"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/model_comparison.png": {
+      "bytes": 60266,
+      "sha256": "4ed2b0974e125a7960f8aac6c6d2c70722fd6a77f304166c651cb7d6d15e4395"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/model_summary.csv": {
+      "bytes": 196,
+      "sha256": "48b9cdb47a853af5d744b9820c41f99ca707d7f84b44fcdde3754b33b224bdd4"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/faithful/split.rds": {
+      "bytes": 6257,
+      "sha256": "2a95a0890ad4f818533da49dd66e41213a2b6acc333e860392839a90a6dfd269"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/package_versions.csv": {
+      "bytes": 19829,
+      "sha256": "ac96a3ae750cf722392517fd122b80afe6711ca611be417140bd6beb6ab4d2e3"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/review-finalization.json": {
+      "bytes": 3279,
+      "sha256": "8960c2f4f3f2a4f9c61da125d4e7c0cf79284b3526954663b59fd4927c8aa7bf"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/sessionInfo.txt": {
+      "bytes": 2352,
+      "sha256": "a83b0798cdef91a0b4a5db538834ff1be6fd8b77041e8eedb9d0a5b4130fdb32"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/13.R": {
+      "bytes": 198,
+      "sha256": "1206c236332bf369f0eaa6aa946a54b2924509def525c43b74119434c9591ca2"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/20.R": {
+      "bytes": 192,
+      "sha256": "d1bd69037a431d62b44f4fc02727593f4e9865236d356e14d2e625f744717401"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/28.R": {
+      "bytes": 198,
+      "sha256": "12e1f4104c8f7238d2ae024aa822a35041150ce6518cec0ca76277421344faed"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/68.R": {
+      "bytes": 733,
+      "sha256": "e42d1230e49eaec4131ebe2cf647c98167fd937eab339889caac9128526444f9"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/69.R": {
+      "bytes": 220,
+      "sha256": "760896b94616842773aa1075a7893f5c4c3c9cec78205e33efa7576c6dbd8e2e"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/70.R": {
+      "bytes": 417,
+      "sha256": "6008f341a1d62e766a034e7a2d715160ffba80622bd15b3a8765a3f7b8833d23"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/71.R": {
+      "bytes": 456,
+      "sha256": "c1571e35ca43ef15109755c914aa9bba56531a7f1fec6270195ebdb36f4dbdd1"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/72.R": {
+      "bytes": 433,
+      "sha256": "78326881d8ce0820bea9095527742ce3a47c63e51fd0b13e7d70c87f5db14632"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/73.R": {
+      "bytes": 476,
+      "sha256": "c5b3792f77bde7a6d16732ee8c7af142edc605a95431095f4da91d9a015c39ff"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/74.R": {
+      "bytes": 749,
+      "sha256": "433bd46aaf962f93dbdec1d9ef8f57617049a50fdba0585e0dda9d7a84e4d53d"
+    },
+    "repository/Results/baseline_manuscript_ml/run-20261026T113840Z-17527/source_cells/8.R": {
+      "bytes": 192,
+      "sha256": "29d0f7fc8503c3db53aac639aaf607c6b8cd4aa3d1429cc4b68527a2df49dfef"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/RF_evidence.rds": {
+      "bytes": 162638,
+      "sha256": "93df7e5556180082f5ee8f0e869edf7c210ab2e9b0982f66e640a575186cfd0b"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/SVM_evidence.rds": {
+      "bytes": 248703,
+      "sha256": "508d6f25b8cd19a5f70c3aefbd6bbb2bb887c1644a414fb88196911c13bba21e"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/artifact_checksums.csv": {
+      "bytes": 2923,
+      "sha256": "1b50e012044a64402a74f323412627461eb05e085dc97bc7a8d0c2cd60c40163"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/effective_defaults.rds": {
+      "bytes": 2602,
+      "sha256": "2e5e79da65eab09329c7436108c5111deb9df0f40f8c0b8b03bd2878bfa4162d"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/execution.log": {
+      "bytes": 18032,
+      "sha256": "d6fe26ef3a729d54439986d93adad782379cada9aedb28cb2ff4592cc8bd9a3c"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/execution_provenance.rds": {
+      "bytes": 101245,
+      "sha256": "9c0926e563e4bc8618f66e6eba09d8a2371dc2746fe5080d9cc7a0ecb01d8999"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/feature_name_mapping.csv": {
+      "bytes": 6081,
+      "sha256": "140dc94c963593348e209f091fcba7f11a53b47f662be45cb3db399ff3455f9b"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/function_bindings.rds": {
+      "bytes": 280,
+      "sha256": "f1e26f8bbcc668e084f3fb82b847990e38ee2c1c485131b24046b3fc2cc32838"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/ml_bridge.rds": {
+      "bytes": 1459163,
+      "sha256": "25e31c1f0d8d360ae940dc4325ac882ea9a412060c6378e6b23beafc753af0a8"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/ml_input_hub_panel.csv": {
+      "bytes": 1658515,
+      "sha256": "97ad54eb03006e990af2cb35a18462ffb6b84de0d4aae734b1309bd2a6b980a8"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/package_versions.csv": {
+      "bytes": 19695,
+      "sha256": "711c6ba7e472d8e528ec832ee4d048440a60529c80ab1ac2dcb5d8c7f17bc3c6"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/review-finalization.json": {
+      "bytes": 612,
+      "sha256": "c32bfe9656758125efcae105da76cf4568e4dedd348eb4deaf41f63db9ddaaeb"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/rf_hub_panel_validation.RData": {
+      "bytes": 158417,
+      "sha256": "d3ec6f4ca95bc1a3b8495037490f99f0fd3a5a39055d27a1e03dacdc8cd4ae66"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/rf_multiclass_roc.png": {
+      "bytes": 68585,
+      "sha256": "a40273c8aab040cc1d117a8ac4d244f9b4b59af1f20edcce5b534c918420f2a2"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/rf_varimp.png": {
+      "bytes": 250468,
+      "sha256": "b617ce98607971849191325c042956df44f564aead9d5bdef42ba400f9b75ca7"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/sessionInfo.txt": {
+      "bytes": 2336,
+      "sha256": "6dff8d21fe384443a1b8f0cf7996227604a57cfbb435694ebd12f9b8a85c5b04"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/133.R": {
+      "bytes": 32,
+      "sha256": "58661fedecf7c638c8aa58b17bc6b3cd243cac149714fc40b2612dc535ad2710"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/134.R": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/135.R": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/136.R": {
+      "bytes": 500,
+      "sha256": "3190015df467bd5f32401147b5fad75ae2f8c689f845d63ad361bb4db7fa9819"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/137.R": {
+      "bytes": 262,
+      "sha256": "890e36f40ce5624b0b243e4aa8b9c20c47c6ff0f0a1ed8b20da9e9d5d5f3317b"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/138.R": {
+      "bytes": 1660,
+      "sha256": "dff2af9e13a20fd3cf41ece6cfee9a9cc973b38986dc37da239d8857a2513d74"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/139.R": {
+      "bytes": 262,
+      "sha256": "890e36f40ce5624b0b243e4aa8b9c20c47c6ff0f0a1ed8b20da9e9d5d5f3317b"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/48.R": {
+      "bytes": 756,
+      "sha256": "ca67bf3159cf917e3ba1b2c9dbc5c1e6692f86aaeb4ba50345f9114398b36bea"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/52.R": {
+      "bytes": 239,
+      "sha256": "5512e3d4bb38fe9ccf730af2923f30b49f71f17dba94bcbc14c1dd1382e6ac88"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/55.R": {
+      "bytes": 1244,
+      "sha256": "7fe1e2b2a427da920756e0db1fa768300fac7602c2855cb9d07b50a9e23aab9f"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/56.R": {
+      "bytes": 500,
+      "sha256": "3190015df467bd5f32401147b5fad75ae2f8c689f845d63ad361bb4db7fa9819"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/57.R": {
+      "bytes": 625,
+      "sha256": "16a22832d6275e3627e05c7f612f35d31f53248f4c9c34a2d47a68ed3cdb0132"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/58.R": {
+      "bytes": 1671,
+      "sha256": "a14c0a1c64bdb74df13a417808b0f8b8d1eddd404e1afca0b49a8ac86993affd"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/59.R": {
+      "bytes": 1312,
+      "sha256": "d7ce9a7e58823bd6199c55922b540bf12d89fa5143c64d02cc4115a91ec0cec5"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/source_cells/60.R": {
+      "bytes": 1043,
+      "sha256": "63b770ec440163f722b49f95fd104ea9bae8c7e577587b364bb9a814dd5adc58"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/split.rds": {
+      "bytes": 4227,
+      "sha256": "f7c3be0792a295df0bdc3bc1d0e15a06901a7b1297b291e873579b45f9111ab4"
+    },
+    "repository/Results/baseline_ml/run-20261026T073318Z-86649/svm_hub_panel_validation.RData": {
+      "bytes": 243048,
+      "sha256": "ef3823aa406b8ee5eb736a70b269ebff24e2f14d38d924f287cd717dabef79a7"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/PCA_post_batch.png": {
+      "bytes": 114343,
+      "sha256": "b50bdece5407cdca137d1fc23cf33307fd5453386cf1c90841c3b7ed68b96a6b"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/PCA_pre_batch.png": {
+      "bytes": 117848,
+      "sha256": "7d54bda707d6e0c5ed919f97dc7bad6666437e60b23caaf9f1c83164dc47479f"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/aligned_metadata.csv": {
+      "bytes": 9411,
+      "sha256": "287e17101149adfefdec1dd0495faf94ebc8becfa9c95e7aa2344eac848255b9"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/aligned_metadata.rds": {
+      "bytes": 982,
+      "sha256": "c6b766098f7d4dea34e60fa7b7167994f4845d983f5a57366547713a77a04644"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/count_threshold_histogram.png": {
+      "bytes": 16768,
+      "sha256": "1cfd4350992d6ea97c8c388f78ffbeb5491681e7c891b7901e120b44526ca88b"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/execution.log": {
+      "bytes": 1087,
+      "sha256": "7cb143dba47fc59082f784e05a24da09b4f1a214de8f11b5a3988a43ae8f71d1"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/execution_provenance.rds": {
+      "bytes": 1330,
+      "sha256": "10bae632b4abd190267bd960640d265ece960b5616841aca65de213ced20f9c7"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/execution_provenance.txt": {
+      "bytes": 3036,
+      "sha256": "bbc623c6c6a528bd87c33c4afd700e8de796393f1d23ca4d57e1952976dccb4d"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/expression_post_batch.rds": {
+      "bytes": 54127948,
+      "sha256": "8b452eed15c3eb8c6c937ffc8a68b094aeb910c8ab42b4cbcabc374becfcaba5"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/expression_pre_batch.rds": {
+      "bytes": 22342205,
+      "sha256": "df605ef3481f9552f333483c4f2c73b2524a18c4189facf5b3ebcad713044989"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/expression_samples_by_genes.rds": {
+      "bytes": 52157988,
+      "sha256": "c5d30758d2fdad1bbb980845958e61370c7a67592130f6e41b4ec0837449b3b4"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/filtered_counts.rds": {
+      "bytes": 13379754,
+      "sha256": "086686bad11786503ae8086c91571d2fc79742450ca21f2f7075a114313ed833"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/package_versions.csv": {
+      "bytes": 9014,
+      "sha256": "ff94c894bc2633f1e7cdab1f9781d1c7e1cbd2861e395bbf620d6e38456de817"
+    },
+    "repository/Results/baseline_preprocessing/run-20261013T053229Z-205981/sessionInfo.txt": {
+      "bytes": 2282,
+      "sha256": "3bc8a5651b0d9d9ec4c5002cd4657f302c50a3bfb3daec1a12ab48ee878c29f9"
+    },
+    "repository/docs/baseline-manuscript-ml.md": {
+      "bytes": 18560,
+      "sha256": "a4631229c9b8f51e90f1c0b710652e03bca03924b3b1fcfb5fe69c99b883f4c4"
+    },
+    "repository/docs/baseline-ml-implementation.md": {
+      "bytes": 12959,
+      "sha256": "9b119bdd39e48b23b0ff4ed125e3bb8c66a14b41daf01c498ec83e108471c55d"
+    },
+    "repository/docs/baseline-ml-reproduction-spec.md": {
+      "bytes": 28489,
+      "sha256": "1814c7d9d816c92903a70f029560265b26db304314def17fa07ffcca5d811452"
+    },
+    "repository/docs/baseline-release-candidate.md": {
+      "bytes": 11212,
+      "sha256": "a2ca3030862c72630863d9174cf880a17aeea4297cc7ec924317c7c9b6467c33"
+    },
+    "repository/docs/baseline-release-inventory.md": {
+      "bytes": 8648,
+      "sha256": "d6f40d51e3583854aa1f33ac6037b3c5cf2add75472ba8622f098d7cc367fb5c"
+    },
+    "repository/docs/baseline-release-inventory.sha256": {
+      "bytes": 31745,
+      "sha256": "676bb364a5773b9473b72586f7ef9d4926657249a8a56cd34d4bd3d950db7dc8"
+    },
+    "repository/docs/baseline-result-reconciliation.md": {
+      "bytes": 29470,
+      "sha256": "aa3c05ef4f762350de28d2ccd2927d5996c0b2414f951aafd682993566be09bb"
+    },
+    "repository/docs/baseline-stage-replay.md": {
+      "bytes": 2650,
+      "sha256": "52aa77554ce7a7440d89ff229abd290c63e84b9c9b07cb71fcf33e15e7324a2f"
+    },
+    "repository/docs/baseline_preprocessing.md": {
+      "bytes": 30353,
+      "sha256": "ecfd77e572aeafc7b4a91de005e4f78588f63df3e3a56c7f4515f6f60b964852"
+    },
+    "repository/docs/baseline_wgcna.md": {
+      "bytes": 117545,
+      "sha256": "41cfe165c714bb330ab7f25903b55bd9b6e41fd61567124892725b93dc92e110"
+    },
+    "repository/notebooks/original/Original_Manu_Pipe.ipynb": {
+      "bytes": 943134,
+      "sha256": "ca9671af2eb21bf551641d1e01bfebef5926c1547fee60c86e6bc06caff2f45c"
+    },
+    "repository/notebooks/original/Project_RNASeq_BreastCancer.ipynb": {
+      "bytes": 28056,
+      "sha256": "5fa56967ab2dc86984976f7570a22e158fc779d2e232300b136c8c41c5df29c4"
+    },
+    "repository/notebooks/original/Untitled7.ipynb": {
+      "bytes": 44555,
+      "sha256": "bf049b7057b832522cfa19c444689ffd0401fb39b0ae28eedea8ce8959fab239"
+    },
+    "repository/notebooks/original/adegbolaayodeji_(Feb_7,_2025,_1_54_58_AM)(1)(1).ipynb": {
+      "bytes": 514381,
+      "sha256": "527a9e3459f3ef0018fc319852727f57e408053db4a947eb3ca938e188dd809d"
+    },
+    "repository/release/baseline-rc1/environments/manu-renv.lock": {
+      "bytes": 321930,
+      "sha256": "4f7afa2d47ab3a43d0b1836887e842fc60f911b57d5a197bc16abbbc00b3ef85"
+    },
+    "repository/release/baseline-rc1/environments/manuscript-renv.lock": {
+      "bytes": 325395,
+      "sha256": "c5f429e188bdd0ea68f9ad76e8e01017a44e9ed150db38298c3ec3c940675cb6"
+    },
+    "repository/release/baseline-rc1/environments/xgboost-api-findings.txt": {
+      "bytes": 4917,
+      "sha256": "981bf91a3530f90c1dc96d14f579da4cf92e3fdc2ec7ead3013cf75997e61c6a"
+    },
+    "repository/release/baseline-rc1/environments/xgboost-api-review.json": {
+      "bytes": 519,
+      "sha256": "f38de57de52c05258fd7bb5b22ce280cae5118137cabf6b0bc3ae49437f3deba"
+    },
+    "repository/release/baseline-rc1/environments/xgboost-build-references.json": {
+      "bytes": 3058,
+      "sha256": "a63a10b55050b3d72936c3065e607c167ebbdde5c6378affa14792df46259b15"
+    },
+    "repository/release/baseline-rc1/patient-audit/patient-overlap.json": {
+      "bytes": 16823,
+      "sha256": "34b42f4e2fedb497ae833b1402370dec153d7a14489145335556862aef25dd1d"
+    },
+    "repository/release/baseline-rc1/patient-audit/split-membership.csv": {
+      "bytes": 28084,
+      "sha256": "3c9023a0c1c02b405071c143ab7465e4c3363364f0d16f361213e17f79a6bf88"
+    },
+    "repository/renv.lock": {
+      "bytes": 255906,
+      "sha256": "c753d978b68fad0c56f146656714c56186980fba4aa6ea64a5e0f915be0c1782"
+    },
+    "repository/renv/activate.R": {
+      "bytes": 40247,
+      "sha256": "10cb02fe000afc9814ca287f18c9e525dd8a031712a440e48eef6e1893eed94b"
+    },
+    "repository/renv/settings.json": {
+      "bytes": 500,
+      "sha256": "d0ea02a6c6f4ab45877cb96aac3b2087b35419743a3ad2bd8f88dccc0f3fda86"
+    },
+    "repository/scripts/audit/build_sample_manifest.py": {
+      "bytes": 4854,
+      "sha256": "0b07c51195b4bae0f6d4ef4dc962d9c22b76e87b66f3d68efbbe155214429788"
+    },
+    "repository/scripts/baseline/manuscript-ml-support.R": {
+      "bytes": 3562,
+      "sha256": "4f5747801665065034579b7bfcfb414a147e6aaf1b4285551e35070c146c9425"
+    },
+    "repository/scripts/baseline/manuscript-ml.R": {
+      "bytes": 28149,
+      "sha256": "6caebb19bb55b4c07a9bf24adc5581fdb28e69e7ba716f996341cd14a985d3d3"
+    },
+    "repository/scripts/baseline/ml-dependency-plan.R": {
+      "bytes": 3733,
+      "sha256": "60f3321a42e8e0067dd3ad0be0b86c3865cf4aeddf4688833c042b6bfa42e9b0"
+    },
+    "repository/scripts/baseline/ml-support.R": {
+      "bytes": 5160,
+      "sha256": "e5196ebd0b02eac08c1c2a03f8d77b2f20a35876c6f2cc73f0e49d071ca575c0"
+    },
+    "repository/scripts/baseline/ml.R": {
+      "bytes": 26034,
+      "sha256": "12797259e7ef5863b3ec0987960e5cb4f3757af0b37d86e5fb845819ebb12adf"
+    },
+    "repository/scripts/baseline/preprocess.R": {
+      "bytes": 14993,
+      "sha256": "3081201bce45222c027af6aafe6e1833936f21eabc7511a2c96de855c231f70a"
+    },
+    "repository/scripts/baseline/wgcna.R": {
+      "bytes": 42682,
+      "sha256": "bbe17bec8aa5a47606a297feb0d2042944825a4807f9b63fe825655585a067b1"
+    },
+    "repository/scripts/release/export_saved_splits.R": {
+      "bytes": 685,
+      "sha256": "e4d74c76ad1824fee3e9fb9cd6fcd34e68ad030ae0129a8347aab47eb76d266f"
+    },
+    "repository/scripts/release/patient_overlap.py": {
+      "bytes": 5091,
+      "sha256": "7c0d3ad216eeabe02f05a03444d6967d42a61c938225bb4f8c6ef4485443de22"
+    },
+    "repository/scripts/release/prepare_frozen_bundle.py": {
+      "bytes": 4525,
+      "sha256": "f448262f03fb0ac05b30eaea7f88333a97db7034dbd45d0c54cdd0135768f6b1"
+    },
+    "repository/scripts/release/verify_frozen_evidence.py": {
+      "bytes": 10795,
+      "sha256": "bd5660fd817fe7c486066693ca18b8a80465eae22f21275a273d334adc9beaf7"
+    },
+    "repository/tests/release/check_frozen_verifier.py": {
+      "bytes": 3110,
+      "sha256": "9e8bac16d895580472130ae67176d0bc1be39e566485ef9ee8b64c7f29497108"
+    },
+    "repository/tests/runtime/check_baseline_ml.R": {
+      "bytes": 9735,
+      "sha256": "185290063e0ee87de6fffdd16e1b88f1786d7fa43cb63c2f84e15640e58278e3"
+    },
+    "repository/tests/runtime/check_manuscript_ml.R": {
+      "bytes": 6618,
+      "sha256": "259522d1405d99eadc21c412a9f0bb7b2876affd0d9e9839c06080f1cc0926e1"
+    },
+    "repository/tests/static/check_baseline_ml.py": {
+      "bytes": 2297,
+      "sha256": "98c37a9f45ec05669e2e291ff03b7b012ca699383897bc8f3f6c0c664684d91a"
+    },
+    "repository/tests/static/check_manuscript_ml.py": {
+      "bytes": 2420,
+      "sha256": "7829b127d802be92f9393812ab013397810379621bdb1d5834a99f4a91fd6e4c"
+    },
+    "tooling/monitoring/CHECKS.txt": {
+      "bytes": 2238,
+      "sha256": "0129b578f2c024f4d793307790dc41c52f3bd4c38bcadf8834a243f0cfe3b295"
+    },
+    "tooling/monitoring/README.md": {
+      "bytes": 11597,
+      "sha256": "e1f06b58240df34cd0c9edd8656aa525997b8596331ea101805f646ebffb802c"
+    },
+    "tooling/monitoring/monitor.py": {
+      "bytes": 12785,
+      "sha256": "d589581654ebb073ff692d1b16d80c3c5ef61e4af21db3731a7aee7da01607a4"
+    },
+    "tooling/monitoring/prepare-vm.sh": {
+      "bytes": 3722,
+      "sha256": "d8c61d00faf2884fa8b6864a266ca25fc30b90286cfc8e5b9154b84030d6dfbb"
+    },
+    "tooling/monitoring/start-analysis.sh": {
+      "bytes": 553,
+      "sha256": "394c4a6fddd261fc470583b32519ecd438eb21dd5227b9a3f0c7b6719ab954b7"
+    },
+    "tooling/monitoring/test_fixtures.py": {
+      "bytes": 7873,
+      "sha256": "4c687989dc62fedd8b82b47a61581348723c50de5ba86489f7617fbf48464b3a"
+    },
+    "tooling/monitoring/test_mutations.py": {
+      "bytes": 3185,
+      "sha256": "29e2c065f6a07786fc028c95804b21dca5e206127af3ded3b261f1326f7078b6"
+    },
+    "tooling/monitoring/test_r2.py": {
+      "bytes": 5798,
+      "sha256": "2e194b4ee73bb256d8daf45253ef3cd394eb7efff85a79e68de73ec46efef138"
+    },
+    "tooling/monitoring/vm-git-preflight.sh": {
+      "bytes": 1991,
+      "sha256": "349a7075322b6551e0bb94e4931f2420ea870318fc52f96939bde6d2a68058b9"
+    },
+    "tooling/retrieval/CHECKS.txt": {
+      "bytes": 5199,
+      "sha256": "3729f0896e93ac3d457352dca769fb16faaa0ef629243313834660dbbbfcc1af"
+    },
+    "tooling/retrieval/README.md": {
+      "bytes": 13806,
+      "sha256": "ddd8cfb79e1964e60e1ae7ef5f2994ce5adecaf31be2f95511b56a896365a48c"
+    },
+    "tooling/retrieval/download-workstation.sh": {
+      "bytes": 2049,
+      "sha256": "ac30a96aa0efaf63bc26cd52a90920e9f51bfdd20d62e47be53c3c68d1e89c62"
+    },
+    "tooling/retrieval/package-vm.py": {
+      "bytes": 7436,
+      "sha256": "018504a509b0919f452474fd43c0e16556aa1f259748eefc7697976808f57cfc"
+    },
+    "tooling/retrieval/test_download.py": {
+      "bytes": 6106,
+      "sha256": "210c99c26d082ce68dfcbb288d8ca231722f7601decfbdf62efbf9ed37dea39b"
+    },
+    "tooling/retrieval/test_fixtures.py": {
+      "bytes": 7025,
+      "sha256": "b7b3cfb82acc3a5ae4d518abf96b3691801854c60ed4b17ea049459cc5ea3536"
+    },
+    "tooling/retrieval/test_mutations.py": {
+      "bytes": 4137,
+      "sha256": "30dcc689e12605c06a6901e982cac7f8d4128de02afc7e9038210aef2ea5829d"
+    },
+    "tooling/retrieval/test_review.py": {
+      "bytes": 15520,
+      "sha256": "8f219305dace7a1bc51546e92c32c88831ce8b45de343372b3e8220e0724afb1"
+    },
+    "tooling/retrieval/validate-report.py": {
+      "bytes": 2772,
+      "sha256": "57610717085e50cb7218c7c194275d5bccd5b89059b87cfd3384751e0b32f48b"
+    },
+    "tooling/retrieval/verify.py": {
+      "bytes": 14089,
+      "sha256": "02db5f74bf3e48b5e8a8076ccd8aaf5a0fafb2feadbb8256b4be84446bbfb9d0"
+    },
+    "wgcna/baseline-review.tar.gz": {
+      "bytes": 304102,
+      "sha256": "27ae5bd58cfc1df3b961a486505cf409844da6e62870284f659b981abf4984cd"
+    },
+    "wgcna/baseline-review/audit/audit-summary.json": {
+      "bytes": 17399,
+      "sha256": "d45fcc707471f8dc56e9041353d61997f03168cb2e4ec64ced39e262b8fe04fa"
+    },
+    "wgcna/baseline-review/audit/python-checks.json": {
+      "bytes": 8036,
+      "sha256": "2e19344863898fe88e35163eaf867a2f287e244ef243c63392793fab975fecdd"
+    },
+    "wgcna/baseline-review/audit/r-checks.csv": {
+      "bytes": 4668,
+      "sha256": "cfd80ff2ba59e423d5ce5b82026d5a2b5b732e4172bb7e972c3bd71656032a3c"
+    },
+    "wgcna/baseline-review/audit/required-artifacts-basis.txt": {
+      "bytes": 189,
+      "sha256": "aedd3d502be084059407a00adfd2c523753e9fcc4c20564e4af40de6cd1e6178"
+    },
+    "wgcna/baseline-review/audit/saved-provenance-observations.txt": {
+      "bytes": 5034,
+      "sha256": "2febc472509d27b348a6ef0041fa5b6f8d29fd14033ba1f511a0d7124866793a"
+    },
+    "wgcna/baseline-review/baseline/artifact_checksums.csv": {
+      "bytes": 2663,
+      "sha256": "ddcb99d8240e82fff948161419b3fc8de37fa4a9f0bf48c46e1f819b26eb7c09"
+    },
+    "wgcna/baseline-review/baseline/effective_function_formals.txt": {
+      "bytes": 5765,
+      "sha256": "a54a05f8e099661adf974e4476949f221f6c8e264783d0b1cd612414bd673b66"
+    },
+    "wgcna/baseline-review/baseline/execution.log": {
+      "bytes": 26864,
+      "sha256": "ba2e97baf86ac3e65c4589e587df97ba0a6bea7ec5b346d52675910afa2ecd30"
+    },
+    "wgcna/baseline-review/baseline/execution_provenance.txt": {
+      "bytes": 17106,
+      "sha256": "1ea69530ec6f497d99abd0aee04410fdcf651a3a03fe7211907e06fe6ec221aa"
+    },
+    "wgcna/baseline-review/baseline/final_hub_genes.csv": {
+      "bytes": 3034,
+      "sha256": "68ab1b6052ecbf3b9882eb66d7046aea3bab0ae3501fdae32bb647c4738b2335"
+    },
+    "wgcna/baseline-review/baseline/final_hub_genes_info.csv": {
+      "bytes": 9603,
+      "sha256": "4255abb160a36176b128dc9d46f5679e98e83c86300441365e739ab3711911be"
+    },
+    "wgcna/baseline-review/baseline/module_summary.csv": {
+      "bytes": 292,
+      "sha256": "9dc3118ce622ebd18ca772052c3cbcc3be68d46c84ace9cb6f870d615ef23859"
+    },
+    "wgcna/baseline-review/baseline/module_trait_FDR.csv": {
+      "bytes": 1463,
+      "sha256": "3b12682ba246f02afc20269eadd5a2bb7cda412a24df996140c55598e289b39b"
+    },
+    "wgcna/baseline-review/baseline/module_trait_correlations.csv": {
+      "bytes": 1398,
+      "sha256": "236b9f7fc65e85f35aed72e767dfe95a93d3d7208b7814221c549f67230b61be"
+    },
+    "wgcna/baseline-review/baseline/module_trait_pvalues.csv": {
+      "bytes": 1471,
+      "sha256": "1fc89cd33e608ffaadbbe7e1bf4b8aeb63df4ca83bcd96b8876d7cdacd9598a7"
+    },
+    "wgcna/baseline-review/baseline/module_trait_summary.csv": {
+      "bytes": 2661,
+      "sha256": "f0300df05cb86493142d40cfaafa327dca6c6085bb6c25f9f0092079362166d7"
+    },
+    "wgcna/baseline-review/baseline/sessionInfo.txt": {
+      "bytes": 3196,
+      "sha256": "722befb28bf514945fe520b43b50744e11210f6a1772845aaca48b49ff2e18ce"
+    },
+    "wgcna/baseline-review/baseline/soft_thresholding_results.csv": {
+      "bytes": 4577,
+      "sha256": "626c6cb3ff0a253e8754a6905c2595c9b70c8a7814c0d07eec562d07b7f103d3"
+    },
+    "wgcna/baseline-review/recovery/module_trait_heatmap.png": {
+      "bytes": 297939,
+      "sha256": "3b19f078146367ca5858c31c6303e9f0bd592dd3cdededf906b1e1a45db3db3f"
+    },
+    "wgcna/baseline-review/recovery/plotting_settings.txt": {
+      "bytes": 4718,
+      "sha256": "ff2c5dfa44efedbfe3fdff7e8cb6c8cd0c0102a1e1cb7b4823a8d78fa3e3ad04"
+    },
+    "wgcna/baseline-review/recovery/recovery_provenance.txt": {
+      "bytes": 2170,
+      "sha256": "043261ee81cce529dcccc9eaa2c60c67e41eae86ea575e47be67445c7efb33ce"
+    },
+    "wgcna/baseline-source-review.tar.gz": {
+      "bytes": 680344,
+      "sha256": "34fbdcb0dcdfb3f6c73322f31f61a26df442d5a6f331c9d6879f74e77f6e3385"
+    },
+    "wgcna/manuscript-reconciliation-inputs/Adegbola_et_al2.pdf": {
+      "bytes": 917218,
+      "sha256": "0963ede3e17f51e560489d09aaf40a425ee422e1b80c3a11f171325cb26abafd"
+    },
+    "wgcna/manuscript-reconciliation-inputs/Machine_Learn.ipynb": {
+      "bytes": 1730457,
+      "sha256": "24f7b02dd302afc48d695fdf7cb6b26968edd6b4b63212c28d33d2a3c6f6c1a1"
+    },
+    "wgcna/verification.json": {
+      "bytes": 1454,
+      "sha256": "d777fdde5eda7d4d1dddd8529f0cccee2d21a3a2e358fa45282d959c0e764220"
+    },
+    "wgcna/wgcna-20261024T171133Z-54144.tar.gz": {
+      "bytes": 2520199688,
+      "sha256": "f1bb9b76a5316dffbed5a80bf5449185280ca7a5d3035336c2ea46a922de92a9"
+    },
+    "wgcna/wgcna-20261024T171133Z-54144.tar.gz.sha256": {
+      "bytes": 102,
+      "sha256": "d66ccb397ce3d8b3a6cee76c2ace1103ecb4e5b6516f10401e6e8a00c55fdf56"
+    }
+  },
+  "format": "baseline-frozen-evidence-v1",
+  "implementation_head": "40926994f7e45aa2eb8dce8657a490f51d1316c3",
+  "meaning": "Archived evidence verification only; not a clean-clone end-to-end rebuild or independent validation.",
+  "working_tree_snapshot": true
+}

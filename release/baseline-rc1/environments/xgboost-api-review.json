@@ -1,0 +1,7 @@
+{
+  "version": "1.7.11.1",
+  "source_sha256": "c15b631be77ae17fef46166abffb3336738a812c219d82c601bc70664a88d7c5",
+  "assessment": "verbatim_api_compatible",
+  "prediction_contract": "flat_row_major_multiclass_probability_vector",
+  "reviewer": "Claude Code (claude-opus-5-5) static source review for Samuel, 2026-10-26; source https://cloud.r-project.org/src/contrib/Archive/xgboost/xgboost_1.7.11.1.tar.gz; evidence /home/samuel/env-records/manuscript-ml-dependencies-20261026T105445Z-4475/xgboost-api-findings.txt"
+}
