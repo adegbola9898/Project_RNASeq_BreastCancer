@@ -10,3 +10,6 @@
 
 # Generated faithful baseline ML runs
 /Results/baseline_ml/
+
+# Separate four-model manuscript replay
+/Results/baseline_manuscript_ml/
